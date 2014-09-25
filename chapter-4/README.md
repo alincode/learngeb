@@ -12,7 +12,7 @@
 ```
 $("form").artist = "1"
 $("form").artist = 2
-$("form").artist = "Alin" 
+$("form").artist = "Alin"
 ```
 
 ## 多選欄位(multiple select)
@@ -28,8 +28,8 @@ $("form").artist = "Alin"
 
 ```
 $("form").meaf = ["2", "3"]
-$("form").meaf = [1, 4, 5] 
-$("form").meaf = ["beef", "fish"] 
+$("form").meaf = [1, 4, 5]
+$("form").meaf = ["beef", "fish"]
 ```
 
 ## checkbox
@@ -90,7 +90,7 @@ class FirewallFunctionSpec extends GebReportingSpec{
         then:
         $('.item').size() > 0
     }
-}	   
+}
 ```
 // TODO: 範例需改善
 
