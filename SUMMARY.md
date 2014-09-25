@@ -1,6 +1,6 @@
 # Summary
 
-* [前言](README.md)
+* [網站自動化測試之美](README.md)
 * [簡介](intro/README.md)
    * [測試！測試！](intro/testtest.md)
    * [認識 Selenium](intro/selenium.md)
