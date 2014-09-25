@@ -22,3 +22,12 @@ Geb 是瀏覽器自動化（browser automation）的解決方案 ，它是 Groov
 * 使用 [GitHub Issues](https://github.com/lyhcode/learning-geb/issues) 回報錯誤
 * 寄信到 lyhcode 小老鼠 gmail.com
 
+時程：
+
+* 2014/11/10 預計初版截稿
+* 2014/11/12 各大線上出版網站上架
+* 2014/11/15 JCConf 2014 研討會發表
+* 2014/12/15 提供付費下載電子書
+* 2014/12/31 Lading Page - 台灣好讀 readbook.tw
+* 2014/12/31 Lading Page - 雲端電子書自助出版聯盟 contpub.org
+* 2015/01/15 實體書發行合作洽談
