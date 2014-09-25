@@ -1,7 +1,10 @@
 # Summary
 
 * [前言](README.md)
-* [簡介](introduction.md)
+* [簡介](intro/README.md)
+   * [測試！測試！](intro/testtest.md)
+   * [認識 Selenium](intro/selenium.md)
+   * [認識 Geb](intro/geb.md)
 * [環境設定](install/README.md)
    * [安裝 Groovy](install/groovy.md)
    * [執行 Geb Script](install/geb_script.md)
