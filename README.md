@@ -1,8 +1,8 @@
 # 網站自動化測試之美
 
-Learning Web Test with Geb
+<div style="float:right; width: 40%">![cover](cover.png)</div>
 
-![cover](cover.png)
+Learning Web Test with Geb
 
 作者：
 
