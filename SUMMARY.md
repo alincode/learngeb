@@ -2,7 +2,7 @@
 
 * [前言](README.md)
 * [簡介](intro/README.md)
-   * [測試！測試！測試！](intro/testtest.md)
+   * [測試！測試！](intro/testtest.md)
    * [認識 Selenium](intro/selenium.md)
    * [認識 Geb](intro/geb.md)
 * [環境設定](install/README.md)
