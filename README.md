@@ -20,5 +20,5 @@ Geb 是瀏覽器自動化（browser automation）的解決方案 ，它是 Groov
 如內容勘誤請協助我們更新：
 
 * 使用 [GitHub Issues](https://github.com/lyhcode/learning-geb/issues) 回報錯誤
-* 寄信到 lyhcode AT gmail.com
+* 寄信到 lyhcode 小老鼠 gmail.com
 
