@@ -112,7 +112,7 @@ def info = new JsonSlurper().parseText(result)
 assert info.cpu == 1
 assert info.networkOut == 0
 assert info.networkIn == 0
-
+```
 
 ## Template Options
 * required
@@ -121,7 +121,7 @@ assert info.networkIn == 0
 * wait
 * page
 
-```
+
 «name»(«options map») { «definition» }
 
 theDiv(cache: false, required: false) { $("div", id: "a") }
