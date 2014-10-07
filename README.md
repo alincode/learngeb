@@ -27,7 +27,7 @@ Geb 是瀏覽器自動化（browser automation）的解決方案 ，它是 Groov
 大綱：
 
 * 簡介
-* 安裝設定
+* 環境設定
 * 基礎
 * 語法
 
