@@ -48,3 +48,9 @@ Navigator 找到的 Element 也可以進一步找到其上層，或繼續往它�
 $("table.books", 0).parent()
 $("div.contents").find("table", cellspacing: '0')
 ```
+
+## 學習資源
+
+由於Selector機制與jQuery非常相似，便可以利用jQuery廣大的資源，快速學習。
+* [w3schools jQuery](http://www.w3schools.com/jquery/jquery_selectors.asp)：有許多範例，並提供線上改，線上測的界面，在學習語法上非常方便且快速。
+* [jQuery Selector Tester](http://www.w3schools.com/jquery/trysel.asp)

@@ -1,3 +1,11 @@
+# 表單
+* 單選欄位
+* 多選欄位
+* checkbox
+* radio
+* 文字欄位
+* 檔案欄位
+
 ## 單選欄位(select)
 ```
 <select name="artist">
@@ -52,9 +60,11 @@ $("checkbox", name: "donate").value("false")
 $("form").meaf = "beef"
 ```
 
-## 設定日期時間
+## 文字欄位
 ```
-new Date().format('yyyy-MM-dd HH-mm')
+<input type="text" name="address"/>
+
+$("input", name: "address").value("台北市XX區")
 ```
 
 ## 上傳檔案
