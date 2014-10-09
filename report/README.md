@@ -19,6 +19,6 @@ Browser.drive {
 
 以下是瀏覽器網頁畫面截圖的範例，對自動化測試的任務，保留各階段測試的畫面，可以彙整成一份更詳盡的測試報告。如果要撰寫一個 Web Screen Capture 的程式，使用 Geb 也可以輕鬆完成。
 
-![Geb Report Sample](geb-report-sample.png)
+![Geb Report Sample](./geb-report-sample.png)
 
 

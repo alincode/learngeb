@@ -59,7 +59,7 @@ $("div.contents").find("table", cellspacing: '0')
 
 要找到特定的網頁元素，我們需要先觀察網頁的 HTML 原始碼。但是只從 Web Server 回應的 HTML 原始資料，經常不足以取得所需的資訊；現代網站很多前端畫面是由 JavaScript 動態產生，DOM 的內容在網頁讀取後還會有所改變，我們可以搭配瀏覽器的除錯工具，例如在 Google Chrome 瀏覽器的網頁中，只要選取右鍵選單的「檢查元素」就能開啟除錯工具（如下圖）。
 
-![image](google-chrome-debugger.png)
+![image](./google-chrome-debugger.png)
 
 學會使用網頁除錯工具，是開始撰寫自動化測試程式的第一步。
 

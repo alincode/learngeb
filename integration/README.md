@@ -100,7 +100,7 @@ gradle test
 
 測試結果也會整合在輸出報表。
 
-![Gradle Report](gradle-geb-report-2.png)
+![Gradle Report](./gradle-geb-report-2.png)
 
 整合到專案自動化建置的 Geb 測試程式，會成為專案自動化測試流程的一部份，在使用 Jenkins CI 持續整合時，也順帶完成瀏覽器自動化測試。
 
