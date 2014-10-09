@@ -1,4 +1,4 @@
-# 表單
+## 表單欄位
 * 單選欄位
 * 多選欄位
 * checkbox
@@ -6,7 +6,7 @@
 * 文字欄位
 * 檔案欄位
 
-## 單選欄位(select)
+### 單選欄位(select)
 ```
 <select name="artist">
     <option value="1">Alin</option>
@@ -20,7 +20,7 @@ $("form").artist = 2
 $("form").artist = "Alin"
 ```
 
-## 多選欄位(multiple select)
+### 多選欄位(multiple select)
 ```
 <select name="meaf" multiple>
     <option value="1">beef</option>
@@ -37,7 +37,7 @@ $("form").meaf = [1, 4, 5]
 $("form").meaf = ["beef", "fish"]
 ```
 
-## checkbox
+### checkbox
 ```
 <input type="checkbox" name="meaf" value="beef" />
 <input type="checkbox" name="meaf" value="chicken" />
@@ -53,21 +53,21 @@ $("checkbox", name: "donate").value("false")
 
 ```
 
-## radio
+### radio
 ```
 <input type="radio" name="meaf" value="beef">
 
 $("form").meaf = "beef"
 ```
 
-## 文字欄位
+### 文字欄位
 ```
 <input type="text" name="address"/>
 
 $("input", name: "address").value("台北市XX區")
 ```
 
-## 上傳檔案
+### 檔案欄位
 ```
 <input type="file" name="csvFile">
 

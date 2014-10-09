@@ -1,4 +1,4 @@
-# Javascript
+## Javascript
 
 ### 怎麼使用變數
 

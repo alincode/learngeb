@@ -10,7 +10,7 @@
    * [執行 Geb Script](install/geb_script.md)
 * [基礎](basic/README.md)
 	* [Navigator API](basic/navigator_API.md)
-	* [入門Geb](basic/getting_started.md)
+	* [第一個自動化測試程式](basic/getting_started.md)
 * [語法](syntax/README.md)
 	* [表單欄位](syntax/form.md) 
 	* [Frame](syntax/frame.md)

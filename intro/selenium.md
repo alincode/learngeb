@@ -1,4 +1,4 @@
-# Selenium WebDriver
+## Selenium WebDriver
 
 [Sellenium](http://docs.seleniumhq.org/) 是為瀏覽器自動化（Browser Automation）需求所設計的一組工具集，它讓我們直接用真實的瀏覽器來自動操作一個網站，將 Sellenium 應用在自動化測試時，除了檢驗網頁內容、填寫表單等基本操作，也能驗證 JavaScript 的功能是否正常執行等，因為 Sellenium 操作的網站畫面就是瀏覽器呈現給使用者的最終結果。
 

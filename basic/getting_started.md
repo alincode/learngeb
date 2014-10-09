@@ -1,4 +1,4 @@
-## Getting Started with Geb ##
+## 第一個自動化測試程式 ##
 
 `Browser.drive` 是開始使用 Geb 的第一步，在 `drive` 的 Closure 區塊內可以使用 Geb 的 DSL 語法，開始進行瀏覽器的各種操作。
 

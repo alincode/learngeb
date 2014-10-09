@@ -1,4 +1,9 @@
-### 值
+## 常見驗證條件
+* 值是否相同？
+* 特定元素存不存在？
+* 直接詢問後端API
+
+### 值是否相同？
 ```
 <html>
 <body>
@@ -9,7 +14,7 @@
 assert $('div').text() == 'aaa'
 ```
 
-### 數量
+### 特定元素存不存在？
 ```
 <html>
 <body>
@@ -21,7 +26,7 @@ assert $('div').text() == 'aaa'
 assert $('div').size() == 2
 ```
 
-### JSON
+### 直接詢問後端API
 
 ```
 go('/rest/instances/'+ id + '/usage?knot=1')
