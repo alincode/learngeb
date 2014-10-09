@@ -49,7 +49,92 @@ $("table.books", 0).parent()
 $("div.contents").find("table", cellspacing: '0')
 ```
 
-## 學習資源
+### 使用 Navigator API ##
+
+使用 Geb 命令瀏覽器開啟一個網頁之後，就可以開始對網頁畫面元素（elements）進行存取或控制。例如取得文字內容或填寫、點選表單元件等，這些流程是瀏覽器自動化的常見操作。
+
+我們需要透過瀏覽器選取一個網頁元素，Geb 透過 Navigator API 提供方便的篩選功能，能夠幫助開發者快速準確找到所需要的網頁元素。
+
+以 CodeData 網站為例，以下範例是找出「搜尋關鍵字」這個文字方塊的表單欄位，並填入「groovy」關鍵字，然後點選旁邊的放大鏡按鈕開始搜尋。
+
+要找到特定的網頁元素，我們需要先觀察網頁的 HTML 原始碼。但是只從 Web Server 回應的 HTML 原始資料，經常不足以取得所需的資訊；現代網站很多前端畫面是由 JavaScript 動態產生，DOM 的內容在網頁讀取後還會有所改變，我們可以搭配瀏覽器的除錯工具，例如在 Google Chrome 瀏覽器的網頁中，只要選取右鍵選單的「檢查元素」就能開啟除錯工具（如下圖）。
+
+![image](images/google-chrome-debugger.png)
+
+學會使用網頁除錯工具，是開始撰寫自動化測試程式的第一步。
+
+利用 Navigator API 尋找網頁中特定的元素，通常我們可以利用 HTML 標籤的 id 或 class 屬性，表單欄位也可以用 name 屬性做篩選。
+
+例如 CodeData 網站的搜尋區塊原始碼如下，包含兩個 `<input />` 標籤都是我們需要找到的目標網頁元素。
+
+```
+  <div class="search">
+    <form onsubmit="return bridge();">
+      <input type="text" value="搜尋關鍵字" class="input" id="keyword" name="keyword">
+
+      <input type="button" value=" " class="submit" id="btnSearch" name="btnSearch">
+    </form>
+  </div>
+```
+
+以這段 HTML 代碼而言，使用 `id` 來尋找目標元素，是最簡單快速的做法。Navigator API 的基本用法與 jQuery Selector 相當類似，以下是填寫關鍵字並按下搜尋按鈕的範例。
+
+```
+$('#keyword').value('groovy')
+$('#btnSearch').click()
+```
+
+目標元素沒有設定 `id` 屬性也是常遇到的情況，Geb Navigator API 也可以利用 `class` 屬性選取元素。相同功能的程式碼改寫如下：
+
+```
+$('div.search .input').value('groovy')
+$('div.search .submit').click()
+```
+
+也可以使用目標元素的某個屬性（attribute）做選取，例如表單元件很適合以 `name` 屬性值篩選。
+
+```
+$('input', name: 'keyword').value('groovy')
+$('input', name: 'btnSearch').click()
+```
+
+使用 `class` 屬性可以找到符合篩選條件的多筆目標元素，如果要知道共找到幾個元素，只要使用 `size()` 方法即可取得數量值。
+
+```
+println $('.list .block h3 a').size()
+```
+
+搭配 Groovy 的 `each` 方法，可以對找到的多筆網頁元素進行存取控制。以下程式碼示範將搜尋結果中每一篇文章的標題印出。
+
+```
+$('.list .block h3 a').each { elem ->
+  println elem.text()
+}
+```
+
+以下是 CodeData 網站搜尋功能自動化操作的完整範例程式碼。
+
+```
+@Grapes([
+    @Grab('org.gebish:geb-core:0.9.2'),
+    @Grab('org.seleniumhq.selenium:selenium-firefox-driver:2.42.0'),
+    @Grab('org.seleniumhq.selenium:selenium-support:2.42.0')
+])
+import geb.Browser
+
+Browser.drive {
+    go 'http://www.codedata.com.tw/'
+
+    $('input', name: 'keyword').value('groovy')
+    $('input', name: 'btnSearch').click()
+
+    $('.list .block h3 a').each { elem ->
+        println elem.text()
+    }
+}
+```
+
+### 學習資源
 
 由於Selector機制與jQuery非常相似，便可以利用jQuery廣大的資源，快速學習。
 * [w3schools jQuery](http://www.w3schools.com/jquery/jquery_selectors.asp)：有許多範例，並提供線上改，線上測的界面，在學習語法上非常方便且快速。

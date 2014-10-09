@@ -24,18 +24,22 @@ Geb 是瀏覽器自動化（browser automation）的解決方案 ，它是 Groov
 * 使用 [GitHub Issues](https://github.com/lyhcode/learning-geb/issues) 回報錯誤
 * 寄信到 lyhcode 小老鼠 gmail.com
 
-## 草稿大綱：
-第一篇
+## 大綱草稿：
+### 第一篇
 * 簡介
 * 環境設定
 * 基礎
 * 語法
-第二篇
+
+### 第二篇
 * 進階語法
-* Pages
-* 模組化
-第三篇
-* 整合 JUnit / Spock
+* Page物件
+* Module物件
+
+### 第三篇
+* 測試報告
+* 測試流程整合
+    * 整合 JUnit / Spock
 * Remote-Control
 * Gradle / Maven
 * Jenkins CI
