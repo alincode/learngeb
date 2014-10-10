@@ -21,7 +21,7 @@
 	* [常見驗證條件](syntax/validation_condition.md)
 * [Page物件](page/README.md)
 	* [Page物件模式](page/pattern.md)
-	* [Content DSL](page/content_DSL.md)
+	* [Content DSL](page/content_dsl.md)
 * [Module物件](module/README.md)
 * [測試報告](report/README.md)
 * [測試框架](test-framework/README.md)
