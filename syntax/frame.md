@@ -11,7 +11,7 @@
 
 ### 直接控制元素
 
-#### Layout.Page
+* Layout.Page
 
 ```
 <html>
@@ -35,7 +35,8 @@ withFrame($('#footer')) { assert $('span') == 'footer text' }
 
 ### 定義成Page物件的content後在控制元素
 
-#### about.html
+* about.html
+
 ```
 <html>
     <body>
