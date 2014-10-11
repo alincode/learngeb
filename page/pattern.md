@@ -1,6 +1,6 @@
 ## Page物件模式
 
-分為三個區塊
+Page有三個靜態屬性
 * url：網址
 * at：頁面的檢查條件
 * content：Page包含的元素
