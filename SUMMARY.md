@@ -22,7 +22,7 @@
 * [Page物件](page/README.md)
    * [Page物件模式](page/pattern.md)
    * [Page URL](page/url.md)
-   * [Content DSL](page/content_dsl.md)
+   * [Content DSL](page/content.md)
 * [Module物件](module/README.md)
 * [測試報告](report/README.md)
 * [測試框架](test-framework/README.md)
