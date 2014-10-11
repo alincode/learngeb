@@ -3,7 +3,7 @@
 * 例如http://www.gebish.org/manual/current/all.html
     * baseUrl 是 http://www.gebish.org/
     * 路徑是 manual/current/all.html
-再 Page Object 的靜態屬性 url ，我們可以只寫路徑，也可以寫 url。
+Page Object 的靜態屬性 url ，我們可以只寫路徑，也可以寫 完整的url。
 
 ### 範例一
 ```
@@ -45,7 +45,7 @@ class FacebookPerson {
 ```
 
 ```
-class FacebookPage {
+class FacebookPage extends Page{
     static url = ""
 
     String convertToPath(FacebookPerson person) {
