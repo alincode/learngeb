@@ -42,7 +42,15 @@ Browser.drive {
 
 ### Template Options
 除了使用預設參數，也可選擇自定參數。像下面這個範例就有這個需求，因為首頁有未登入狀態時，不會有登出連結，反之，在已登入狀態時，也不會有登入連結。如果不使用自定參數，則會拋出[RequiredPageContentNotPresent](http://www.gebish.org/manual/current/api/geb/error/RequiredPageContentNotPresent.html)的exception。
-* 範例
+
+#### 可自定的參數有
+* required
+* cache
+* to
+* wait
+* page
+
+#### 範例
 
 ```
 import geb.*
@@ -57,10 +65,3 @@ class FrontPage extends Page {
 }
 ```
 
-
-可自定的參數有
-* required
-* cache
-* to
-* wait
-* page
