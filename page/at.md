@@ -2,7 +2,7 @@
 
 > 這個屬性存在的目的，就是定義Page的檢查條件，確認是否為期望的那一頁。
 
-###常見的判斷
+### 常見的判斷
 
 * title
 
@@ -36,3 +36,52 @@ class GebHomePage extends Page {
     static at = { waitFor { title.endsWith("Groovy Browser Automation") } }
 }
 ```
+### 如何呼叫
+```
+import geb.Browser
+
+Browser.drive {
+    to GebHomePage2
+    at GebHomePage2
+}
+```
+### 拋出異常
+```
+import geb.*
+
+class GebHomePage2 extends Page {
+    static url = "http://www.gebish.org/"
+    static at = { $('h1').size() == 6 }
+}
+```
+
+```
+Caught: Assertion failed:
+
+$('h1').size() == 6
+|       |      |
+|       5      false
+[[[[[ChromeDriver: chrome on MAC] -> tag name: html]] -> css selector: h1]
+
+    at GebHomePage2$__clinit__closure1.doCall(GebHomePage2.groovy:5)
+	at GebHomePage2$__clinit__closure1.doCall(GebHomePage2.groovy)
+	at geb.Page.verifyThisPageAtOnly(Page.groovy:165)
+	at geb.Page.verifyAt(Page.groovy:133)
+	at geb.Page$verifyAt$3.call(Unknown Source)
+	at geb.Browser.doAt(Browser.groovy:358)
+	at geb.Browser.this$2$doAt(Browser.groovy)
+	at geb.Browser$this$2$doAt$10.callCurrent(Unknown Source)
+	at geb.Browser.at(Browser.groovy:289)
+	at geb.Browser.to(Browser.groovy:436)
+	at geb.Browser$to$1.callCurrent(Unknown Source)
+	at geb.Browser.to(Browser.groovy:412)
+	at geb01$_run_closure1.doCall(geb01.groovy:9)
+	at geb01$_run_closure1.doCall(geb01.groovy)
+	at geb.Browser.drive(Browser.groovy:860)
+	at geb.Browser$drive$0.callStatic(Unknown Source)
+	at geb.Browser.drive(Browser.groovy:830)
+	at geb.Browser$drive.call(Unknown Source)
+	at geb01.run(geb01.groovy:8)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)
+```
+

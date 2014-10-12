@@ -72,4 +72,5 @@ $("input", name: "address").value("台北市XX區")
 <input type="file" name="csvFile">
 
 $("form").csvFile = "/profile/data.csv"
+$('input', name : 'csvFile').value '/profile/data.csv'
 ```
