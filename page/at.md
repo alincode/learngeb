@@ -37,6 +37,7 @@ class GebHomePage extends Page {
 }
 ```
 ### 如何呼叫
+剛剛只有在Page中定義了at靜態屬性，但不代表你在執行to GebHomePage2時，就會一併檢查at，需要另外呼叫才行。
 ```
 import geb.Browser
 
@@ -45,7 +46,14 @@ Browser.drive {
     at GebHomePage2
 }
 ```
+
+但另一種情況，它就會預設執行at檢查。
+```
+$('a.home2').click(GebHomePage2)
+```
 ### 拋出異常
+當條件不符合，at內所以定義時，就會跳出類似於下方的失敗訊息。
+
 ```
 import geb.*
 
