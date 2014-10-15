@@ -1,72 +1,50 @@
 # 設定檔
+* 在開始動手之前，來看看 [Configuration API](http://www.gebish.org/manual/current/api/geb/Configuration.html)
+* 有哪些東西可以設定？找set開頭的method
+* 要怎麼設？
 
-## Driver
-你要驅動哪個瀏覽器，全看這個設定了。你可以將Firefox視為預設的瀏覽器，因為它是唯一不是要另外裝Driver的Browser。
-```
-import org.openqa.selenium.firefox.FirefoxDriver
+setReportOnTestFailureOnly(boolean value)
 
-driver = { new FirefoxDriver() }
-```
-當然你可以設Chrome，因為執行速度比較快，我個人都用這個。但使用Chrome需要另外裝[ Chrome Driver ](https://code.google.com/p/selenium/wiki/ChromeDriver)。
-```
-import org.openqa.selenium.chrome.ChromeDriver
+    reportOnTestFailureOnly = true
 
-driver = { new ChromeDriver() }
-```
-或
-```
-driver = { new InternetExplorerDriver() }
-```
+setBaseUrl(def baseUrl)
 
-### 安裝 Chrome Driver
-1. 將你電腦的瀏覽器更新到最新版
-2. 下載最新版的[檔案](http://chromedriver.storage.googleapis.com/index.html)
-3. 解壓縮後，放置在各作業系統指定位置
+    baseUrl = "http://localhost:8080"
 
-Mac
-```
-unzip chromedriver_mac32.zip
-cp chromedriver /usr/bin/.
-```
+setReportsDir([File](http://download.oracle.com/javase/6/docs/api/java/io/File.html) reportsDir)
 
-Linux 64bit
-```
-unzip chromedriver_linux64.zip
-cp chromedriver /usr/bin/.
-```
+    reportsDir = new File("target/geb-reports")
 
-Linux 32bit
-```
-unzip chromedriver_linux32.zip
-cp chromedriver /usr/bin/.
-```
+setDriver([WebDriver](http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/WebDriver.html) driver)
 
-Windowns
-* 因為每個版本的路徑不太一樣，我建議你直接搜尋chrome.exe，然後把解壓縮的檔案，放在跟chrome.exe同個資料夾下。
-
-### 設定環境變數
-* GebConfig.groovy
-
-```
-import org.openqa.selenium.firefox.FirefoxDriver
-import org.openqa.selenium.chrome.ChromeDriver
-
-driver = { new FirefoxDriver() }
-
-environments {
-
-    chrome {
-        driver = { new ChromeDriver() }
+    driver = {
+    	def driver = new FirefoxDriver()
+    	driver.javascriptEnabled = true
+    	driver
     }
 
-    firefox {
-        driver = { new FirefoxDriver()}
+setUnexpectedPages(Collection pages)
+
+    unexpectedPages = [PageNotFoundPage, InternalServerErrorPage]
+
+setDefaultWaitTimeout(Double defaultWaitTimeout)
+setDefaultWaitRetryInterval(Double defaultWaitRetryInterval)
+
+    waiting {
+    	timeout = 5
+    	retryInterval = 0.1
     }
-}
-```
-### 切換測試瀏覽器
-```
-mvn -Dgeb.env=chrome test
-// or
-mvn -Dgeb.env=firefox test
-```
+
+setWaitPreset(String name, Double presetTimeout, Double presetRetryInterval)
+
+    waiting {
+    	presets {
+    		slow {
+    			timeout = 20
+    			retryInterval = 1
+    		}
+    		quick {
+    			timeout = 1
+    		}
+    	}
+    }

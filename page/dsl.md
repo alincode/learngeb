@@ -40,18 +40,20 @@ Browser.drive {
 }
 ```
 
-### Template Options
-除了使用預設參數，也可選擇自定參數。像下面這個範例就有這個需求，因為首頁有未登入狀態時，不會有登出連結，反之，在已登入狀態時，也不會有登入連結。如果不使用自定參數，則會拋出[RequiredPageContentNotPresent](http://www.gebish.org/manual/current/api/geb/error/RequiredPageContentNotPresent.html)的exception。
+除了使用預設參數，也可選擇自定參數。
 
-#### 可自定的參數有
-* required
-* cache
-* to
-* wait
-* page
+### required
+* required預設true
 
-#### 範例
+當required為true，但loginLink不存在時，下面的範例會拋出[RequiredPageContentNotPresent](http://www.gebish.org/manual/current/api/geb/error/RequiredPageContentNotPresent.html)，但若
+required為false，則不會拋出exception。
 
+```
+Browser.drive {
+    to ExamplePage
+    loginLink.click()
+}
+```
 ```
 import geb.*
 
@@ -64,4 +66,62 @@ class FrontPage extends Page {
     }
 }
 ```
+### cache
+* cache預設false
 
+```
+import geb.spock.GebReportingSpec
+import pages.FrontPage
+import spock.lang.Stepwise
+
+@Stepwise
+class CacheSpec extends GebReportingSpec{
+
+    def "test cache true"(){
+        when:
+        to FrontPage
+        assert theValue1 == 1
+        value1 = 2
+        assert theValue1 == 1
+
+        then:
+        true
+    }
+
+    def "test cache false"(){
+        when:
+        assert theValue2 == 1
+        value2 = 2
+        assert theValue2 == 2
+
+        then:
+        true
+    }
+
+}
+
+```
+
+```
+import geb.Page
+
+class FrontPage extends Page {
+
+    def value1 = 1
+    def value2 = 1
+
+    static content = {
+        theValue1(cache: true) { value1 }
+        theValue2(cache: false) { value2 }
+    }
+}
+```
+
+### to
+* to預設null
+
+### wait
+* wait預設false
+
+### page
+* page預設null

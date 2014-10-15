@@ -32,36 +32,3 @@ Browser.drive {
 * waitFor(10, 0.5) {} 最長等待時間為 10 秒，每次判斷條件的間隔時間為 0.5 秒
 * waitFor("quick") {} 依照自定的等待時間
 ```
-
-### 官方預設等待時間
-
-```
-// GebConfig.groovy
-
-waiting {
-    timeout = 10
-    retryInterval = 0.5
-}
-```
-### 自定等待時間
-```
-// GebConfig.groovy
-
-waiting {
-    presets {
-        slow {
-            timeout = 20
-            retryInterval = 1
-        }
-        quick {
-            timeout = 1
-        }
-    }
-}
-```
-
-```
-waitFor("quick"){
-	text == "中斷"
-}
-```
