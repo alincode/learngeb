@@ -65,3 +65,4 @@ environments {
 mvn -Dgeb.env=chrome test
 // or
 mvn -Dgeb.env=firefox test
+```

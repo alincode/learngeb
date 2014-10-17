@@ -30,6 +30,7 @@
    * [Driver](configuration/driver.md)
    * [Waiting](configuration/waiting.md)
    * [atCheckWaiting](configuration/at_check_waiting.md)
+   * [Reporter](configuration/reporter.md)
 * [測試報告](report/README.md)
 * [測試框架](test-framework/README.md)
    * [跨瀏覽器測試支援](test-framework/cross_browser.md)
