@@ -35,6 +35,7 @@
 * [測試框架](test-framework/README.md)
    * [跨瀏覽器測試支援](test-framework/cross_browser.md)
    * [HtmlUnit Driver](test-framework/HtmlUnit_driver.md)
+   * [PhantomJs Driver](test-framework/phantomjs_driver.md)
    * [Chrome Driver](test-framework/Chrome_Driver.md)
    * [搭配單元測試框架](test-framework/unit_test.md)
 * [測試流程整合](integration/README.md)
