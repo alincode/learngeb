@@ -39,5 +39,11 @@
    * [Chrome Driver](test-framework/Chrome_Driver.md)
    * [搭配單元測試框架](test-framework/unit_test.md)
 * [測試流程整合](integration/README.md)
+* [持續整合測試](ci/README.md)
+   * [安裝Jenkins](ci/setup_jenkins.md)
+   * [新增作業](ci/newjob.md)
+   * [新增測試機節點](ci/new_node.md)
+   * [測試結果](ci/test_report.md)
+   * [通知信](ci/ext_email.md)
 * [顧問服務](consulting/README.md)
 
