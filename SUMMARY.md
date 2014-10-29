@@ -45,6 +45,7 @@
    * [新增測試機節點](ci/new_node.md)
    * [測試結果](ci/test_report.md)
    * [通知信](ci/ext_email.md)
+   * [初始化資料庫](ci/init_db.md)
 * [整合 Spira Test](spira/README.md)
    * [整合解決方案](spira/solution.md)
    * [API](spira/api.md)
