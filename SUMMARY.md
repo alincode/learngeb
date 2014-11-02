@@ -8,6 +8,7 @@
 * [環境設定](install/README.md)
    * [安裝 Groovy](install/groovy.md)
    * [安裝 Gradle](install/gradle.md)
+   * [Run Geb with Groovy Shell](install/run_geb_with_groovy_shell.md)
    * [執行 Geb Script](install/geb_script.md)
 * [基礎](basic/README.md)
    * [Navigator API](basic/navigator_API.md)
