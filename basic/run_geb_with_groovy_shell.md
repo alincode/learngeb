@@ -56,19 +56,21 @@ Grape.grab(group: 'org.gebish', module: 'geb-core', version: '0.9.3')
 * module = geb-core
 * version = 0.9.3
 
-引用 Selenium WebDriver 套件（FirefoxDriver）。
+引用 Selenium WebDriver 套件，這裏我們使用 Selenium 的 Firefox WebDriver，它不需要額外的設定，只要在電腦上已經安裝最新版的 Firefox 瀏覽器軟體。
 
 ```groovy
 Grape.grab(group: 'org.seleniumhq.selenium', module: 'selenium-firefox-driver', version: '2.43.1')
 ```
 
-建立 Browser 物件
+建立一個 `Browser` 的物件。
 
 ```groovy
 browser = new geb.Browser()
 ```
 
-開啟 Google 搜尋首頁。
+這裡所建立的 `browser` 讓我們可以開始和瀏覽器進行互動，接下來，我們以 Google 搜尋為例，讓瀏覽器幫我們自動完成關鍵字搜尋、並解析搜尋結果的內容。
+
+使用 `go` 指令，開啟 Google 搜尋首頁的 URL 位址。
 
 ```groovy
 browser.go 'http://google.com'
