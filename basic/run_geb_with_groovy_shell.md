@@ -12,13 +12,17 @@ Groovy Shell 是 REPL（Read–eval–print loop）的 command-line 工具，可
 * Groovy
 * Firefox 瀏覽器
 
-執行 Groovy Shell
+打開終端機（Terminal）程式，輸入「groovysh」開始執行 Groovy Shell 程式。
 
 ```bash
 $ groovysh
 ```
 
-測試，執行一段 println 程式。
+看到「`groovy:000>`」提示，就可以開始執行接下來提供的範例指令。以下是執行 Groovy Shell 的終端機畫面，從畫面中可以看到，每次執行一行指令，指令回傳結果會立即顯示在「`===>`」後面。
+
+![groovysh](groovysh-example.png)
+
+先執行一段程式，測試 Groovy Shell 的操作。這是一段很簡易的 Groovy Hello World 程式，將一段訊息顯示在終端機，只要使用 `println` 指令。
 
 ```groovy
 println 'Hello Geb'
@@ -32,17 +36,25 @@ Hello Geb
 ===> null
 ```
 
-使用 Grapes。
+Geb 並不是 Groovy 內建的套件，它需要從網路上的 Maven 套件庫（repositories）下載。Groovy 的 Grapes 功能可以自動完成套件的下載工作，包含套件所依賴的其他相關套件，也會自動解析並取得。
+
+在 Groovy Shell 底下使用 Grapes，需要先做 `import` 引用 `Grape` 類別。
 
 ```groovy
-import `groovy.grape.Grab`
+import groovy.grape.Grape
 ```
 
-引用 Geb 套件。
+使用 `Grape` 提供的 `grab()` 方法，取得所需的 Geb 套件。
 
 ```groovy
 Grape.grab(group: 'org.gebish', module: 'geb-core', version: '0.9.3')
 ```
+
+以 [geb-core](http://mvnrepository.com/artifact/org.gebish/geb-core/0.9.3) 套件為例，在 [MVNRepository](http://mvnrepository.com/) 網站可以利用搜尋功能，找到開放源碼專案的 Maven Repository，藉此得到套件所需的參數，例如：
+
+* group = org.gebish
+* module = geb-core
+* version = 0.9.3
 
 引用 Selenium WebDriver 套件（FirefoxDriver）。
 
