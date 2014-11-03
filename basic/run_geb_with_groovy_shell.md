@@ -165,3 +165,7 @@ b.find('h3.r a').each {
 }
 ```
 
+使用 Groovy Shell 很適合 Geb 入門學習。
+
+未來在撰寫測試程式時，Groovy Shell 也可以用來執行一些實驗，可以不用重新跑完整個測試程式。
+
