@@ -1,62 +1,42 @@
 # 網站自動化測試之美
 
-<div style="float:right; width: 40%">![cover](cover.png)</div>
+<img src="cover.png" alt="cover" align="right" width="50%" />
 
 Learning Web Test with Geb
 
-作者：
+## 作者
 
 * 劉艾霖（資深網站開發者）
 * 林彥宏（Java / Groovy 開發技術推廣者）
 
-摘要：
+這是一本開放源碼電子書，使用 GitBook 協作出版，本書全文與範例程式碼放在 GitHub 網站。
 
-Geb 是瀏覽器自動化（browser automation）的解決方案 ，它是 Groovy 用於 Web Test 自動化測試的 DSL（Domain-Specific Language）。Geb 的內部是 Selenium WebDriver 瀏覽器自動化測試引擎，提供類似 jQuery Selector 的 DOM 操作方法，可以與多種 Java 測試框架整合搭配。使用易讀易寫的 Groovy DSL 語法撰寫 Script 可以簡化工作，Geb 是不能錯過的 Web Test 自動化測試框架。
+https://github.com/lyhcode/learning-geb
+
+## 摘要
+
+Geb 是瀏覽器自動化（browser automation）的解決方案。
+
+以強大的 Selenium WebDriver 作為基礎，直接控制瀏覽器進行網站操作，而非模擬 HTTP 存取的方式，即使面對 AJAX 或是複雜的 RIA（Rich Internet Application）也能輕鬆駕馭。
+
+發揮 Groovy 程式語言作為 DSL（Domain-Specific Language）的優勢，建構出一套瀏覽器自動化專屬的語法，並提供類似 jQuery 的操作方法，存取網頁 DOM 節點更方便，撰寫測試程式更簡潔快速。
+
+可以用簡單的 Groovy Script 方式執行，也可以配合 Maven 或 Gradle 建置專案，能夠無縫整合 JUnit、Spock 或 TestNG 等測試框架，並且搭配 Jenkins CI 進行專案開發流程整合。
+
+## 如何取得電子書？
+
+因為這本書還在「不斷長大」，請瀏覽這本書的專屬網站，取得最新發行的內容。
+
+http://learngeb.readbook.tw/
+
+也可以掃描 QR-Code 哦！
 
 ![qrcode](qrcode.png)
 
-協作：
+## 勘誤回饋？
 
-本書是開放源碼電子書，使用 GitBook 自助出版平台發行！
-
-如內容勘誤請協助我們更新：
+如發現內容勘誤，請好心的大大協助我們更正，歡迎利用這些管道和我們聯繫：
 
 * 使用 [GitHub Issues](https://github.com/lyhcode/learning-geb/issues) 回報錯誤
 * 寄信到 lyhcode 小老鼠 gmail.com
 
-## 大綱草稿：
-### 第一篇
-* 簡介
-* 環境設定
-* 基礎
-* 語法
-
-### 第二篇
-* 進階語法
-* Page物件
-* Module物件
-
-### 第三篇
-* 測試報告
-* 測試流程整合
-    * 整合 JUnit / Spock
-* Remote-Control
-* Gradle / Maven
-* Jenkins CI
-	* Master / slave Test host 設定
-	* 保存測試結果
-* 各Browser使用方式
-	* 圖形化Browser
-	* 非圖形化Browser
-* 自定listener
-* 自動化佈署來達到持續測試
-
-## 時程：
-
-* 2014/11/10 預計初版截稿(第一篇)
-* 2014/11/12 各大線上出版網站上架
-* 2014/11/15 JCConf 2014 研討會發表
-* 2014/12/15 提供付費下載電子書
-* 2014/12/31 Lading Page - 台灣好讀 readbook.tw
-* 2014/12/31 Lading Page - 雲端電子書自助出版聯盟 contpub.org
-* 2015/01/15 實體書發行合作洽談
