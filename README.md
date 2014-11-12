@@ -1,7 +1,5 @@
 # 網站自動化測試之美
 
-<img src="cover.png" alt="cover" align="right" width="50%" />
-
 Learning Web Test with Geb
 
 ## 作者
