@@ -1,6 +1,8 @@
 ## PhantomJs Driver
 它是目前正當紅的Headless Website Testing，不需瀏覽器就可以測試，有些情況我們可能沒有GUI界面的測試機可以使用，那它就正好可派上用場了。
 
+如果您的網站對於小視窗的適應度不好，記得要設好是固定視窗大小，還有PhantomJs對於，點擊後才能看見的選單，相容性也不是很好，實作時需要想辦法避開這個問題。
+
 ### 安裝
 * [下載安裝檔](http://phantomjs.org/download.html)
 * 開始安裝
@@ -37,8 +39,11 @@ ln -s /opt/phantomjs/bin/phantomjs /usr/bin/phantomjs
                         '--ssl-protocol=any',
                 ] as String[],
         )
-        caps.setCapability("takesScreenshot", true);
-        driver = {new PhantomJSDriver(caps)}
+        PhantomJSDriverService.createDefaultService(caps)
+        phantomJSDriver = new PhantomJSDriver(caps)
+        // 設定視窗的寬高
+        phantomJSDriver.manage().window().setSize(new Dimension(1280, 800))
+        driver = { phantomJSDriver }
     }
 ```
 
