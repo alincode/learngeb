@@ -94,7 +94,7 @@ browser.go 'http://google.com'
 使用 `id` 比較能確保找到正確的 DOM 節點（node）。
 
 ```groovy
-form = browser.find('form#tsf')
+form = browser.$('form#tsf')
 ```
 
 使用 `size()` 方法，可以得知 `find()` 是否找到目標節點。以此例而言，執行 `form.size()` 會得到回傳值「`1`」。
@@ -118,27 +118,32 @@ form.q = 'jcconf 2014'
 
 這段程式碼執行後，可以看到瀏覽器在關鍵字的欄位貼入「jcconf 2014」文字內容。
 
-接下來觀察「Google 搜尋」按鈕的原始碼，得知利用「btnK」可以找到此按鈕的 DOM 節點，使用選擇器「`input[name=btnK]`」。
+接下來觀察「Google 搜尋」按鈕的原始碼。
 
 ```html
 <input value="Google 搜尋" name="btnK" jsaction="sf.chk" type="submit">
 ```
-
-利用 `find()` 方法找到此節點。
+得知利用「btnK」可以找到此按鈕的 DOM 節點，使用選擇器「`input[name=btnK]`」找到搜尋按鈕。
 
 ```groovy
 btnK = form.find('input[name=btnK]')
 ```
 
-按下搜尋按鈕。
+接著觸發點擊（click）事件，送出表單資料。
 
 ```groovy
 btnK.click()
 ```
 
+Geb 與表單的按鈕進行互動，還可以用更簡單的方式：
+
+```groovy
+form.btnK().click()
+```
+
 可以看到瀏覽器顯示搜尋結果。
 
-觀察搜尋結果的 HTML 原始碼，可以得知搜尋結果的網頁連結，被放在 `<h3 class="r"` 的節點下。
+觀察搜尋結果的 HTML 原始碼，可以得知搜尋結果的網頁連結，被放在 `<h3>` 的節點下。
 
 ```html
 <h3 class="r">
@@ -147,18 +152,22 @@ btnK.click()
     </a>
 ```
 
-把搜尋結果的每個連結取出，並顯示網頁標題文字。
+利用 Groovy 的 each 方法，把搜尋結果的每個標題文字取出，並依序顯示。
 
 ```groovy
-browser.find('h3.r a').each {
-    println it.text()
-}
+browser.$('h3').each { println it.text() }
+```
+
+使用 Groovy 的 collect 方法，可以將標題全部放到一個 ArrayList 裡面。
+
+```groovy
+titles = browser.$('h3').collect { it.text() }
 ```
 
 這段程式碼，示範如何將 Google 搜尋結果，轉換成 Markdown 格式的內容輸出。
 
 ```groovy
-b.find('h3.r a').each {
+browser.$('h3 a').each {
     def title = it.text()
     def href = it.attr('href')
     println "* [${title}](${href})"
@@ -167,5 +176,5 @@ b.find('h3.r a').each {
 
 使用 Groovy Shell 很適合 Geb 入門學習。
 
-未來在撰寫測試程式時，Groovy Shell 也可以用來執行一些實驗，可以不用重新跑完整個測試程式。
+未來在撰寫測試程式時，Groovy Shell 也可以用來執行一些實驗，不必重新跑完整個測試程式，就能即時調整一些參數，立即看到執行的結果並加以修正。
 

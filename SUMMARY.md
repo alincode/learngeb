@@ -11,6 +11,7 @@
    * [安裝 Maven](install/maven.md)
 * [入門](basic/README.md)
    * [Run Geb with Groovy Shell](basic/run_geb_with_groovy_shell.md)
+   * [GoogleSearch command line tool](basic/googlesearch_command_line_tool.md)
    * [執行 Geb Script](basic/geb_script.md)
    * [Navigator API](basic/navigator_API.md)
    * [撰寫 Geb 程式碼](basic/first_script.md)

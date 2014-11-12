@@ -1,0 +1,15 @@
+#!/usr/bin/env groovy
+@Grab('org.gebish:geb-core:0.9.3')
+@Grab('org.seleniumhq.selenium:selenium-firefox-driver:2.43.1')
+import geb.Browser
+
+def url = args[0]
+
+Browser.drive {
+    config.reportsDir = new File('.')
+
+    go url
+
+    report "screenshot"
+}.quit()
+
