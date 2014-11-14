@@ -36,6 +36,46 @@ Selenium IDE 是 Firefox 附加元件（extension），需要搭配 Firefox 瀏�
 3. 找到「搜尋」按鈕，按下（Click）
 4. 取得搜尋結果，檢查結果是否包含預期的內容
 
+## Selenium Remote Control
+
+簡稱 Selenium RC，它提供可以遠端執行 Selenium 的 Client / Server 架構。
+
+測試專案搭配持續整合（Continous Integration）伺服器使用時，例如我們的 Jenkins CI 可能裝在一部 CentOS Linux 伺服器，而且 Server 沒有 X11 桌面環境（headless）。但是我們希望被測試的網站，可以在不同作業系統搭配不同瀏覽器的異質環境執行，例如：
+
+1. Mac OS X + Safari
+2. Ubuntu Linux + Google Chrome
+3. Ubuntu Linux + Firefox
+4. Windows XP + IE 7
+5. Windows 7 + IE 9
+
+只要在這幾部機器（可以是虛擬機器的 Guest OS）執行 Selenium Server，我們就可以利用主控端的 Selenium Client，控制這些遠端的機器的瀏覽器。
+
+Selenium Server 是以可執行的 Java JAR 封裝檔發行，可以從 Selenium 網站下載「selenium-server-standalone-版本編號.jar」，然後利用 java 指令執行。
+
+```bash
+java -jar selenium-server-standalone-2.44.0.jar
+```
+
+預設的 Port 號碼是 4444，如果已經被佔用，也可以指派一組 Port 給它。
+
+```bash
+java -jar selenium-server-standalone-2.44.0.jar -port 4400
+```
+
+在 Selenium Server 執行成功後，從終端機輸出訊息可以得知連線字串。
+
+```
+RemoteWebDriver instances should connect to: http://127.0.0.1:4444/wd/hub
+```
+
+Selenium Server 以 HTTP 協定提供 Web Services（使用 Jetty），拿到一組有效的 URL 位址後，就可以用它來設定 Selenium Client。
+
+```
+http://127.0.0.1:4444/wd/hub
+```
+
+這對專案測試來說，真是一大福音！如果沒有 Selenium Server，可能要面對在各種環境分別部署 Jenkins CI 的難題。
+
 ## Selenium WebDriver
 
 許多 Web Test Framework，都是以 Sellenium API 作為基礎，功能強大且穩固已經讓 Sellenium 成為瀏覽器自動化的基石。Sellenium 2.0 帶來 WebDriver 的實作，跨越不同瀏覽器的自動化操作，有更清楚定義的標準可循，目前 [WebDriver API](http://www.w3.org/TR/webdriver/) 規範已提交 W3C，若能夠被標準化且在各大瀏覽器實作，執行跨瀏覽器的自動化測試工作將會被簡化許多。
