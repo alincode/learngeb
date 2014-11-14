@@ -161,20 +161,21 @@ browser.$('h3').each { println it.text() }
 使用 Groovy 的 collect 方法，可以將標題全部放到一個 ArrayList 裡面。
 
 ```groovy
-titles = browser.$('h3').collect { it.text() }
+browser.$('h3').collect { it.text() }
 ```
 
 這段程式碼，示範如何將 Google 搜尋結果，轉換成 Markdown 格式的內容輸出。
 
 ```groovy
-browser.$('h3 a').each {
-    def title = it.text()
-    def href = it.attr('href')
-    println "* [${title}](${href})"
-}
+browser.$('h3 a').each { println "* [${it.text()}](${it.attr('href')})" }
+```
+
+獲取 HTML 原始碼。
+
+```groovy
+browser.driver.pageSource
 ```
 
 使用 Groovy Shell 很適合 Geb 入門學習。
 
 未來在撰寫測試程式時，Groovy Shell 也可以用來執行一些實驗，不必重新跑完整個測試程式，就能即時調整一些參數，立即看到執行的結果並加以修正。
-
