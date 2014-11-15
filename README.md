@@ -2,6 +2,10 @@
 
 Learning Web Test with Geb
 
+## 推薦文
+
+* 整理中
+
 ## 作者
 
 * 劉艾霖（資深網站開發者）
@@ -30,6 +34,12 @@ http://learngeb.readbook.tw/
 也可以掃描 QR-Code 哦！
 
 ![qrcode](qrcode.png)
+
+## 簡報
+
+<iframe src="//www.slideshare.net/slideshow/embed_code/41586026" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+
+* [淺談 Geb 網站自動化測試](http://www.slideshare.net/lyhcode/jcconf-2014gebtalk) （JCConf 2014）
 
 ## 勘誤回饋？
 
