@@ -1,41 +1,39 @@
 ## Frame
+現在多數的網站都不用瀏覽器原生的彈跳視窗，而是使用框架提供的視窗，以 [`JQuery UI dialog`](http://jqueryui.com/dialog/) 為例，可透過瀏覽器開發者工具動態觀察原始碼，你就可以發現實際上背後是iframe元素。
 
 語法上可以大概分為兩類：
-
 * 直接控制元素
+* 定義成Page物件的content後，在控制元素
 
-* 定義成Page物件的content後在控制元素
-
-我就針對官方舉的例子做修改與延伸，其他method的使用，可以看 [Frame API](http://www.gebish.org/manual/current/api/geb/frame/FrameSupport.html)
-
+下面例子是針對官方舉的例子做修改與延伸，其他method的使用，可以在查看 [`Frame API`](http://www.gebish.org/manual/current/api/geb/frame/FrameSupport.html)。
 
 ### 直接控制元素
 
-* Layout.Page
+#### html (layout.html)
 
 ```
 <html>
     <body>
-        <frame name="header" src="header_frame.html"></frame>
-        <frame id="footer" src="footer_frame.html"></frame>
-        <iframe id="content" src="about.html"></iframe>
-        <span>main</span>
-    <body>
+    <iframe name="header" src="header_frame.html"></iframe>
+    <iframe id="footer" src="footer_frame.html"></iframe>
+    <iframe id="content" src="about.html"></iframe>
+    <span>main</span>
+    </body>
 </html>
 ```
 
-#### 語法範例
+#### geb
 
 ```
-withFrame('header') { assert $('span') == 'header text' }
-withFrame('footer') { assert $('span') == 'footer text' }
-withFrame(0) { assert $('span') == 'header text' }
-withFrame($('#footer')) { assert $('span') == 'footer text' }
+withFrame('header') { assert $('span').text() == 'header text' }
+withFrame('footer') { assert $('span').text() == 'footer text' }
+withFrame(0) { assert $('span').text() == 'header text' }
+withFrame($('#footer')) { assert $('span').text() == 'footer text' }
 ```
 
-### 定義成Page物件的content後在控制元素
+### 定義成Page物件的content後，在控制元素
 
-* about.html
+#### html (about.html)
 
 ```
 <html>
@@ -45,22 +43,24 @@ withFrame($('#footer')) { assert $('span') == 'footer text' }
 </html>
 ```
 
-#### 語法
+#### geb
 
 ```
 to LayoutPage
 withFrame(aboutFrame) {
-      assert $('span') == 'about text'
+      assert $('span').text()== 'about text'
 }
 ```
 
-#### Page物件
-
 ```
-class LayoutPage extends Page{
-
+class LayoutPage extends Page {
+    static url = 'layout.html'
     static content = {
         aboutFrame(page: AboutPage){$('#content')}
     }
+}
+
+class AboutPage extends Page {
+    static url = 'about.html'
 }
 ```

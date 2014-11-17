@@ -1,9 +1,8 @@
 ## Javascript
 
-### 基本操作
+### 使用變數
 
-* 使用變數
-
+#### html
 ```
 <html>
     <script type="text/javascript">
@@ -14,12 +13,14 @@
 </html>
 ```
 
+#### geb
 ```
 assert js.aVariable == 1
 ```
 
-* 呼叫方法(method)
+### 呼叫方法(method)
 
+#### html
 ```
 <html>
     <script type="text/javascript">
@@ -32,29 +33,53 @@ assert js.aVariable == 1
 </html>
 ```
 
+#### geb
 ```
 assert js.add(1, 1) == 2
 
 ```
 
-* 使用原生JS
+### 使用原生JS
 
+#### geb
 ```
 assert js."document.title" == "Geb"
 ```
 
 ### 對話視窗
-一般常見的對話視窗有alert、confirm、prompt，[AlertAndConfirmSupport](http://www.gebish.org/manual/current/api/geb/js/AlertAndConfirmSupport.html) 這個類別涵蓋了前兩項，由於Geb不鼓勵使用prompt對話視窗，所以不支持這個功能。
+一般常見的對話視窗有alert、confirm、prompt， [`AlertAndConfirmSupport`](http://www.gebish.org/manual/current/api/geb/js/AlertAndConfirmSupport.html) 這個類別涵蓋了前兩項，由於Geb不鼓勵使用prompt對話視窗，所以不支持這個功能。
 
-#### 常見的方法有
-* String withAlert(Closure actions)
-* void withNoAlert(Closure actions)
-* void withNoConfirm(Closure actions)
-* String withConfirm(boolean ok, Closure actions)
-    * ok參數預設為true，可省略
+常用類別 `AlertAndConfirmSupport` 的方法
+<table>
+    <tr>
+        <th>回傳值</th><th>方法名稱</th><th>說明</th>
+    </tr>
+    <tr>
+        <td>String</td>
+        <td>withAlert(Closure actions)</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>void</td>
+        <td>withNoAlert(Closure actions)</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>void</td>
+        <td>withNoConfirm(Closure actions)</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>String</td>
+        <td>withAlert(Closure actions)</td>
+        <td>ok參數預設為true，可省略</td>
+    </tr>
+</table>
 
-#### 範例
-* JavascriptSpec
+範例
+----
+
+####  geb
 
 ```
 package example
@@ -99,7 +124,7 @@ class JavascriptPage extends Page{
 
 ```
 
-* javascript.html
+#### html
 
 ```
 <html>
@@ -113,4 +138,3 @@ class JavascriptPage extends Page{
 </body>
 </html>
 ```
-

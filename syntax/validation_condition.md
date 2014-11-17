@@ -2,19 +2,27 @@
 * 值是否相同？
 * 特定元素存不存在？
 * 直接詢問後端API
+* 補充常見實作錯誤
 
 ### 值是否相同？
+
+#### html
 ```
 <html>
 <body>
 	<div>aaa</div>
 </body>
 </html>
+```
 
+#### geb
+```
 assert $('div').text() == 'aaa'
 ```
 
 ### 特定元素存不存在？
+
+#### html
 ```
 <html>
 <body>
@@ -22,7 +30,10 @@ assert $('div').text() == 'aaa'
 	<div></div>
 </body>
 </html>
+```
 
+### geb
+```
 assert $('div').size() == 2
 ```
 
@@ -38,7 +49,9 @@ assert info.networkOut == 0
 assert info.networkIn == 0
 ```
 
-## 常見錯誤
+### 補充常見實作錯誤
+
+#### UnresolvablePropertyException
 
 ```
 geb.error.UnresolvablePropertyException: Unable to resolve searchModule as content for Page, or as a property on its Navigator context. Is searchModule a class you forgot to import?
@@ -46,6 +59,5 @@ geb.error.UnresolvablePropertyException: Unable to resolve searchModule as conte
 	at geb.Browser.propertyMissing(Browser.groovy:210)
 	at geb.spock.GebSpec.propertyMissing(GebSpec.groovy:58)
 ```
-* to XXXPage
-* import
+* 忘了把用到的其他類別import進來
 * element名稱打錯

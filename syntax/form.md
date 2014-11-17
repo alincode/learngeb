@@ -1,6 +1,5 @@
 ## 表單欄位
 
-
 ### 文字欄位
 
 #### html
@@ -118,7 +117,7 @@ $('form').hobbies
 assert $("input", name: "hobbies").value() == false
 
 // 值包括chicken
-$('form').hobbies.contains("chicken")
+assert $('form').hobbies.contains("chicken")
 ```
 
 ### radio
