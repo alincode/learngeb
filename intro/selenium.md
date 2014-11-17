@@ -21,7 +21,7 @@ Selenium 發展迄今，已有四個主要的專案發行。
 
 Selenium IDE 是 Firefox 附加元件（extension），需要搭配 Firefox 瀏覽器才能使用。
 
-> 使用 Firefox 安裝 [Sellenium IDE Plugins](http://docs.seleniumhq.org/projects/ide/) 
+> 使用 Firefox 安裝 [Sellenium IDE Plugins](http://docs.seleniumhq.org/projects/ide/)
 
 在 Firefox 瀏覽器的「工具」選單，打開「Selenium IDE」，會出現下面這個視窗畫面。
 

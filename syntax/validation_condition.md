@@ -37,3 +37,15 @@ assert info.cpu == 1
 assert info.networkOut == 0
 assert info.networkIn == 0
 ```
+
+## 常見錯誤
+
+```
+geb.error.UnresolvablePropertyException: Unable to resolve searchModule as content for Page, or as a property on its Navigator context. Is searchModule a class you forgot to import?
+	at geb.content.PageContentSupport.propertyMissing(PageContentSupport.groovy:64)
+	at geb.Browser.propertyMissing(Browser.groovy:210)
+	at geb.spock.GebSpec.propertyMissing(GebSpec.groovy:58)
+```
+* to XXXPage
+* import
+* element名稱打錯
