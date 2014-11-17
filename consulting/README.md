@@ -1,9 +1,24 @@
-# 顧問服務
+# 課程服務
 
-針對「網站測試自動化」，思創軟體提供以下服務內容。
+我們提供課程服務，希望能夠幫助更多開發團隊，用更好的流程開發 Web 應用程式。
 
-* 教育訓練課程
-* 專案自動化測試顧問
-* 測試案例撰寫指導
+## Course Learning Objectives
 
-如有專業支援或其它需求，請與我們聯絡。
+1. Agile software development and test-driven
+2. Groovy programming
+3. Build a testable web application (with Grails MVC framework)
+4. Testable objects (entities, controllers and services)
+5. Practice of unit test and integration test
+6. Selenium tools
+7. Simple Geb scripting
+8. Advanced Geb concepts and usages
+9. Create a test project with Gradle or Maven
+10. Testing framework integration
+11. Continuous Integration with Jenkins CI
+
+## Speakers
+
+* 劉艾霖, Geb Testing Practice
+* 林彥宏, Groovy and Grails programming 
+* 謝宗穎, Test-driven development
+

@@ -2,19 +2,6 @@
 
 Learning Web Test with Geb
 
-## 推薦文
-
-* 整理中
-
-## 作者
-
-* 劉艾霖（資深網站開發者）
-* 林彥宏（Java / Groovy 開發技術推廣者）
-
-這是一本開放源碼電子書，使用 GitBook 協作出版，本書全文與範例程式碼放在 GitHub 網站。
-
-https://github.com/lyhcode/learning-geb
-
 ## 摘要
 
 Geb 是瀏覽器自動化（browser automation）的解決方案。
@@ -24,6 +11,33 @@ Geb 是瀏覽器自動化（browser automation）的解決方案。
 發揮 Groovy 程式語言作為 DSL（Domain-Specific Language）的優勢，建構出一套瀏覽器自動化專屬的語法，並提供類似 jQuery 的操作方法，存取網頁 DOM 節點更方便，撰寫測試程式更簡潔快速。
 
 可以用簡單的 Groovy Script 方式執行，也可以配合 Maven 或 Gradle 建置專案，能夠無縫整合 JUnit、Spock 或 TestNG 等測試框架，並且搭配 Jenkins CI 進行專案開發流程整合。
+
+## 課程
+
+<!--<iframe src="//www.slideshare.net/slideshow/embed_code/41586026" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>-->
+
+* [淺談 Geb 網站自動化測試](http://www.slideshare.net/lyhcode/jcconf-2014gebtalk) （發表於 [JCConf 2014](http://jcconf.tw/schedule.html) 由社群主辦 Java 開發者年會）
+
+<!--
+## 書評
+
+> 本書所提及的自動測試流程與工具，在實作經驗上是完成專案的神兵利器，在現今的各型專案裡，自動化測試的重要性已遠比寫程式要來的更需要被優先考量，保持研發的熱情，也是自動化測試的價值，沒有正確導入自動化測試將會造成研發成本的多餘耗費。
+
+— Kalvar Lin, manager of Trend Micro research and development.
+
+> Geb是以Groovy所開發的測試工具，底層可以採用Selenium的WebDriver來測試網頁應用程式。這場演講Teddy非常喜歡，講者口條清楚而且按部就班、深入淺出介紹Geb，從一開始如何用Geb測試簡單的網頁、讀取網頁中的元素，到利用Groovy語言的特性，採用Given、When、Then的格式將驗收測試的規格直接寫在測試案例中。講者提到他正在撰寫一本有關測試的書，相當值得期待。
+
+— Teddy, 泰迪軟體創辦人, 分享於搞笑談軟工部落格「[JCConf Taiwan 2014一日遊](http://teddy-chen-tw.blogspot.tw/2014/11/jcconf-taiwan-2014.html)」
+-->
+
+## 作者
+
+* 劉艾霖（資深網站開發者）
+* 林彥宏（Java / Groovy 開發技術推廣者）
+
+這是一本開放源碼電子書，使用 GitBook 協作出版，本書全文與範例程式碼放在 GitHub 網站。
+
+https://github.com/lyhcode/learning-geb
 
 ## 如何取得電子書？
 
@@ -35,11 +49,7 @@ http://learngeb.readbook.tw/
 
 ![qrcode](qrcode.png)
 
-## 簡報
-
-<iframe src="//www.slideshare.net/slideshow/embed_code/41586026" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
-
-* [淺談 Geb 網站自動化測試](http://www.slideshare.net/lyhcode/jcconf-2014gebtalk) （JCConf 2014）
+（用手機掃瞄條碼進入 Geb 電子書首頁）
 
 ## 勘誤回饋？
 

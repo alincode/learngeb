@@ -53,5 +53,5 @@
    * [整合解決方案](spira/solution.md)
    * [API](spira/api.md)
    * [實作](spira/implementation.md)
-* [顧問服務](consulting/README.md)
+* [課程服務](consulting/README.md)
 
