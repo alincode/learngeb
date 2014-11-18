@@ -1,5 +1,5 @@
 ## Content DSL
-* 範例一
+#### 範例一
 
 ```
 import geb.*
@@ -19,11 +19,9 @@ Browser.drive {
     emailInput.value('aaa@bbb.com')
 }
 ```
-* 範例二
+#### 範例二
 
 ```
-import geb.*
-
 class FrontPage extends Page {
 
     static content = {
@@ -40,13 +38,48 @@ Browser.drive {
 }
 ```
 
+### 自定參數
 除了使用預設參數，也可選擇自定參數。
 
-### required
-* required預設true
+<table>
+    <tr>
+        <th>參數</th><th>預設值</th><th>說明</th>
+    </tr>
+    <tr>
+        <td>required</td>
+        <td>true</td>
+        <td>當required為true，但loginLink不存在時，下面的範例會拋出[RequiredPageContentNotPresent](http://www.gebish.org/manual/current/api/geb/error/RequiredPageContentNotPresent.html)，但若
+required為false，則不會拋出exception。</td>
+    </tr>
+   <tr>
+        <td>required</td>
+        <td>true</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>cache</td>
+        <td>false</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>to</td>
+        <td>null</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>wait</td>
+        <td>false</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>page</td>
+        <td>null</td>
+        <td></td>
+    </tr>
+</table>
 
-當required為true，但loginLink不存在時，下面的範例會拋出[RequiredPageContentNotPresent](http://www.gebish.org/manual/current/api/geb/error/RequiredPageContentNotPresent.html)，但若
-required為false，則不會拋出exception。
+#### 使用required範例
+
 
 ```
 Browser.drive {
@@ -54,6 +87,7 @@ Browser.drive {
     loginLink.click()
 }
 ```
+
 ```
 import geb.*
 
@@ -66,8 +100,8 @@ class FrontPage extends Page {
     }
 }
 ```
-### cache
-* cache預設false
+
+### 使用cache範例
 
 ```
 import geb.spock.GebReportingSpec
@@ -116,12 +150,3 @@ class FrontPage extends Page {
     }
 }
 ```
-
-### to
-* to預設null
-
-### wait
-* wait預設false
-
-### page
-* page預設null
