@@ -47,19 +47,19 @@ import groovy.grape.Grape
 使用 `Grape` 提供的 `grab()` 方法，取得所需的 Geb 套件。
 
 ```groovy
-Grape.grab(group: 'org.gebish', module: 'geb-core', version: '0.9.3')
+Grape.grab(group: 'org.gebish', module: 'geb-core', version: '0.10.0')
 ```
 
 以 [geb-core](http://mvnrepository.com/artifact/org.gebish/geb-core/0.9.3) 套件為例，在 [MVNRepository](http://mvnrepository.com/) 網站可以利用搜尋功能，找到開放源碼專案的 Maven Repository，藉此得到套件所需的參數，例如：
 
 * group = org.gebish
 * module = geb-core
-* version = 0.9.3
+* version = 0.10.0
 
 引用 Selenium WebDriver 套件，這裏我們使用 Selenium 的 Firefox WebDriver，它不需要額外的設定，只要在電腦上已經安裝最新版的 Firefox 瀏覽器軟體。
 
 ```groovy
-Grape.grab(group: 'org.seleniumhq.selenium', module: 'selenium-firefox-driver', version: '2.43.1')
+Grape.grab(group: 'org.seleniumhq.selenium', module: 'selenium-firefox-driver', version: '2.44.0')
 ```
 
 建立一個 `Browser` 的物件。
