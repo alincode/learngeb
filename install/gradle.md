@@ -13,7 +13,21 @@ The latest release of Gradle is 2.2, released on 10th November 2014.
 
 http://gradle.org/downloads
 
-推薦：使用 gvm 安裝。
+安裝提示：下載及解壓縮 gradle-2.2-bin.zip 檔案，並正確設定環境變數的 PATH。
+
+Ubuntu Linux 可以使用 apt-get 安裝（但我們仍建議您考慮 GVM 安裝方式）。
+
+```bash
+sudo apt-get install gradle
+```
+
+使用 gvm 安裝（**推薦的方式**），適合 Linux、Mac OS X、Cygwin。
+
+```bash
+curl -s get.gvmtool.net | bash
+```
+
+安裝 Gradle 最新版。
 
 ```bash
 gvm install gradle
