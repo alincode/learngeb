@@ -2,6 +2,7 @@
 
 * [前言](README.md)
 * [簡介](intro/README.md)
+   * [Geb 是什麼？](intro/what_is_geb.md)
    * [測試！測試！](intro/testtest.md)
    * [認識 Selenium](intro/selenium.md)
    * [認識 Geb](intro/geb.md)
@@ -57,6 +58,6 @@
    * [整合解決方案](spira/solution.md)
    * [API](spira/api.md)
    * [實作](spira/implementation.md)
-* [常見錯誤](exception/README.md)
+* [常見問題](question/README.md)
 * [課程服務](consulting/README.md)
 
