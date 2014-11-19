@@ -19,7 +19,7 @@
    * [第一個自動化測試程式](basic/getting_started.md)
    * [瀏覽器基本操作指令](basic/browsers.md)
 * [語法](syntax/README.md)
-   * [表單欄位](syntax/form.md)
+   * [表單處理](syntax/form.md)
    * [Frame](syntax/frame.md)
    * [Javascript](syntax/javascript.md)
    * [Wait](syntax/wait.md)
