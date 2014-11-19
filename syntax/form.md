@@ -122,8 +122,8 @@ assert $('input', name: 'hobbies').value() == false
 assert $('form').hobbies.contains('chicken')
 ```
 
-### radio
-HTML 表單中的單選元素
+## 選項按鈕 (Radio)
+HTML 表單中的單選按鈕
 
 **HTML Source Code**
 ```

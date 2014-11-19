@@ -1,23 +1,23 @@
 # 測試報告
-> Geb提供了簡易的報表功能，每個測試步驟都會產出一個當前 HTML 原始碼和一個網頁畫面截圖png檔
+Geb提供了簡易的報表功能，每個測試步驟都會產出一個當前 HTML 原始碼和一個網頁畫面截圖png檔
 
 ## 設定
 
 * report：設定報告標簽
 
-```
+```groovy
 report 'codedata-home'
 ```
 
 * reportGroup：設定報告群組
 
-```
+```groovy
 reportGroup "codedata"
 ```
 
 * cleanReportGroupDir：清除群組報告資料夾的檔案
 
-```
+```groovy
 cleanReportGroupDir()
 ```
 
@@ -32,7 +32,7 @@ cleanReportGroupDir()
 
 以下是將 CodeData 首頁截圖的範例
 
-```
+```groovy
 Browser.drive {
     config.reportsDir = new File('/tmp')
     go 'http://www.codedata.com.tw/'

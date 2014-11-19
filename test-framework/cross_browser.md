@@ -1,4 +1,4 @@
-## 跨瀏覽器測試支援 ##
+# 跨瀏覽器測試支援
 
 測試網站在不同瀏覽器執行的相容度，也是許多軟體專案測試的常見需求，Geb 使用 Selenium WebDriver 為基礎，所以 Selenium 支援的瀏覽器類型，就可以在 Geb 程式中使用。使用 MVNRepository.com 查詢 [org.seleniumhq.selenium](http://mvnrepository.com/artifact/org.seleniumhq.selenium) 群組，可以看到 Selenium 已經提供的 WebDriver 套件，以下是目前已經發佈的 WebDriver 專案名稱：
 

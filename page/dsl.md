@@ -1,7 +1,12 @@
-## Content DSL
-#### 範例一
+# Content DSL
 
-```
+## 範例
+
+### 範例一
+
+**Geb Sample Code**
+
+```groovy
 import geb.*
 
 class LoginPage extends Page {
@@ -13,15 +18,18 @@ class LoginPage extends Page {
 }
 ```
 
-```
+```groovy
 Browser.drive {
     to LoginPage
     emailInput.value('aaa@bbb.com')
 }
 ```
-#### 範例二
 
-```
+### 範例二
+
+**Geb Sample Code**
+
+```groovy
 class FrontPage extends Page {
 
     static content = {
@@ -30,7 +38,7 @@ class FrontPage extends Page {
 }
 ```
 
-```
+```groovy
 Browser.drive {
     to FrontPage
     assert menu("menu-about").text() == "About Me"
@@ -38,7 +46,8 @@ Browser.drive {
 }
 ```
 
-### 自定參數
+## 自定參數
+
 除了使用預設參數，也可選擇自定參數。
 
 <table>
@@ -78,17 +87,18 @@ required為false，則不會拋出exception。</td>
     </tr>
 </table>
 
-#### 使用required範例
+### 使用 required
 
+**Geb Sample Code**
 
-```
+```groovy
 Browser.drive {
     to ExamplePage
     loginLink.click()
 }
 ```
 
-```
+```groovy
 import geb.*
 
 class FrontPage extends Page {
@@ -101,9 +111,11 @@ class FrontPage extends Page {
 }
 ```
 
-### 使用cache範例
+### 使用 cache
 
-```
+**Geb Sample Code**
+
+```groovy
 import geb.spock.GebReportingSpec
 import pages.FrontPage
 import spock.lang.Stepwise
@@ -136,7 +148,7 @@ class CacheSpec extends GebReportingSpec{
 
 ```
 
-```
+```groovy
 import geb.Page
 
 class FrontPage extends Page {

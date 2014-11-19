@@ -1,4 +1,4 @@
-## Chrome Driver ##
+# Chrome Driver
 
 使用 Geb 搭配其他瀏覽器時，需要先配置所需的執行環境，以 Google Chrome 瀏覽器為例，必須先下載安裝 ChromeDriver 並配置 `webdriver.chrome.driver` 系統環境變數。
 
@@ -13,7 +13,7 @@
 
 以下是 Geb 搭配 Chrome 瀏覽器的程式範例。
 
-```
+```groovy
 @Grapes([
     @Grab('org.gebish:geb-core:0.9.3'),
     @Grab('org.seleniumhq.selenium:selenium-chrome-driver:2.42.0'),

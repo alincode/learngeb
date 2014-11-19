@@ -1,10 +1,11 @@
 # 整合 Spira Test
+
 [Spria Test](http://www.inflectra.com/SpiraTest/)  提供一個友善的界面儀表板式呈現測試結果，生命週期為 Requirements -> Test Case -> Test Run
 
 ![Dashboard](Dashboard.png)
 
+**Site Map**
 
-Site Map
 * Planning
 	* Requirements 需求書
 	* Releases 版號

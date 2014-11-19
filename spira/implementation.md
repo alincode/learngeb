@@ -1,8 +1,8 @@
-## 實作
+# 實作
 
-### SpiraTestCase
+**SpiraTestCase**
 
-```
+```java
 @java.lang.annotation.Target({java.lang.annotation.ElementType.TYPE})
 @java.lang.annotation.Retention(java.lang.annotation.RetentionPolicy.RUNTIME)
 @org.spockframework.runtime.extension.ExtensionAnnotation(SpockExtension.class)
@@ -11,9 +11,9 @@ public @interface SpiraTestCase {
 }
 ```
 
-### SpiraTestSet
+**SpiraTestSet**
 
-```
+```java
 @java.lang.annotation.Target({java.lang.annotation.ElementType.TYPE})
 @java.lang.annotation.Retention(java.lang.annotation.RetentionPolicy.RUNTIME)
 @org.spockframework.runtime.extension.ExtensionAnnotation(SpockExtension.class)
@@ -22,9 +22,9 @@ public @interface SpiraTestSet {
 }
 ```
 
-### SpockExtension
+**SpockExtension**
 
-```
+```java
 import org.spockframework.runtime.extension.AbstractAnnotationDrivenExtension;
 
 public class SpockExtension extends AbstractAnnotationDrivenExtension {
@@ -39,9 +39,9 @@ public class SpockExtension extends AbstractAnnotationDrivenExtension {
 }
 ```
 
-### SpiraIntegrationListener
+**SpiraIntegrationListener**
 
-```
+```java
 public class SpiraIntegrationListener extends RunListener{
     private Integer getSpiraTestCaseId(Description description){
         Class<?> obj = description.getTestClass();
@@ -56,9 +56,9 @@ public class SpiraIntegrationListener extends RunListener{
 }
 ```
 
-### pom.xml
+**pom.xml**
 
-```
+```xml
     <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
@@ -86,18 +86,18 @@ public class SpiraIntegrationListener extends RunListener{
       </plugin>
 ```
 
-### GebReportingSpec
+**GebReportingSpec**
 
-```
+```groovy
 @Stepwise
 @SpiraTestCase(id=123)
 @SpiraTestSet(id=1)
 class FaqSpec extends GebReportingSpec
 ```
 
-### 虛擬碼
+## 虛擬碼
 
-```
+```java
 updateTestCaseSteps();
 
 ArrayOfRemoteManualTestRun arrayOfRemoteManualTestRun = spiraExecute.createArrayOfRemoteManualTestRun(testCaseStepMap.keySet());

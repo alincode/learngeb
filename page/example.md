@@ -1,9 +1,10 @@
-## 完整範例
+# 完整範例
+
 以下是 `Page` 物件定義的範例，在`content`區塊中，我們將該網頁內容需要被自動化操作的 DOM 元件，先透過 Navigator  API 找到，就能夠方便在測試程式中使用。
 
-#### LoginPage.groovy
+**Geb Sample Code**
 
-```
+```groovy
 import geb.Page
 
 class LoginPage extends Page {
@@ -17,9 +18,9 @@ class LoginPage extends Page {
 }
 ```
 
-#### DashboardPage.groovy
+**Geb Sample Code**
 
-```
+```groovy
 import geb.Page
 
 class DashboardPage extends Page {
@@ -36,6 +37,8 @@ class DashboardPage extends Page {
 * 使用 `at` 判斷是否為在該 `Page` 所屬頁面。
 
 `Page` 物件讓 Geb 測試程式呈現更有趣的 DSL 風格。
+
+**Geb Sample Code**
 
 ```
 import geb.Browser

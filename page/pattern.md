@@ -8,7 +8,7 @@ Page有三個靜態屬性
 
 除了這三個區塊外，你還可以額外自定物件的方法。
 
-```
+```groovy
 import geb.*
 
 class LoginPage extends Page {

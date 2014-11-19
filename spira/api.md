@@ -1,6 +1,6 @@
-## API
+# API
 
-實作的基本流程
+**實作的基本流程**
 
 * Test Case 需先在平台建好，然後Test Case Step可以透過API動態新增與更新。
 
