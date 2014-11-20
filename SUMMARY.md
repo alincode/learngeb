@@ -58,6 +58,7 @@
    * [整合解決方案](spira/solution.md)
    * [API](spira/api.md)
    * [實作](spira/implementation.md)
+* [IDE](ide/README.md)
 * [常見問題](question/README.md)
 * [課程服務](consulting/README.md)
 
