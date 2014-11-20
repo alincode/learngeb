@@ -9,7 +9,7 @@
             "top": 62,
             "bottom": 62
         },
-        "headerTemplate": "_TITLE_",
+        "headerTemplate": "",
         "footerTemplate": "_PAGENUM_"
     }
 }
