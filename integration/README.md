@@ -1,7 +1,8 @@
 # 測試流程整合
+
 * Gradle、Spock、Geb 測試流程整合
 
-## Gradle、Spock、Geb 測試流程整合 ##
+## Gradle、Spock、Geb 測試流程整合
 
 簡易的 Geb 測試程式只要用 Groovy Script 方式撰寫，但是對一個完整的 Web 專案測試而言，上百甚至上千行的 Script 程式碼，將會讓測試程式變得難以維護。在實務上我們必須搭配自動化專案建置工具與測試框架，讓 Geb 的測試程式也能為專案建置的一部份。
 
@@ -13,7 +14,7 @@
 
 我們以 Gradle 建置工具示範 Geb + Spock 的測試流程整合，以下是所需要的 `build.gradle` 設定範例。
 
-```
+```groovy
 apply plugin: 'groovy'
 
 repositories {
@@ -39,7 +40,7 @@ dependencies {
 
 範例：`src/test/groovy/LoginPage.groovy`（登入表單）
 
-```
+```groovy
 import geb.Page
 
 class LoginPage extends Page {
@@ -55,7 +56,7 @@ class LoginPage extends Page {
 
 範例：`src/test/groovy/DashboardPage.groovy`（主畫面）
 
-```
+```groovy
 import geb.Page
 
 class DashboardPage extends Page {
@@ -70,7 +71,7 @@ class DashboardPage extends Page {
 
 範例：`src/test/groovy/TwitterSpec.groovy`
 
-```
+```groovy
 import geb.Page
 import geb.spock.GebSpec
 
@@ -94,7 +95,7 @@ class TwitterSpec extends GebSpec {
 
 執行 Gradle 的 test 任務時，就會執行 Geb 測試程式。
 
-```
+```bash
 gradle test
 ```
 
@@ -106,7 +107,7 @@ gradle test
 
 請參考本文附錄的[完整程式碼](https://github.com/lyhcode/GroovyTutorial/tree/master/src/09_GebWebTest/gradle-spock-geb)。
 
-## 參考資源 ##
+## 參考資源
 
 * [The Book of Geb](http://www.gebish.org/manual/current/)
 * [Taming Functional Web Testing with Spock and Geb](http://www.infoq.com/presentations/testing-spock-geb) ([slides](http://qconlondon.com/dl/qcon-london-2013/slides/PeterNiederwieser_TamingFunctionalWebTestingWithSpockAndGeb.pdf))

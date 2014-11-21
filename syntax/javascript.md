@@ -1,9 +1,10 @@
-## Javascript
+# Javascript
 
-### 使用變數
+## 使用變數
 
-#### html
-```
+**HTML Source Code**
+
+```html
 <html>
     <script type="text/javascript">
         var aVariable = 1;
@@ -13,15 +14,17 @@
 </html>
 ```
 
-#### geb
-```
+**Geb Sample Code**
+
+```groovy
 assert js.aVariable == 1
 ```
 
-### 呼叫方法(method)
+## 呼叫方法(method)
 
-#### html
-```
+**HTML Source Code**
+
+```html
 <html>
     <script type="text/javascript">
         function add(a,b) {
@@ -33,20 +36,22 @@ assert js.aVariable == 1
 </html>
 ```
 
-#### geb
-```
+**Geb Sample Code**
+
+```groovy
 assert js.add(1, 1) == 2
 
 ```
 
-### 使用原生JS
+## 使用原生JS
 
-#### geb
-```
+**Geb Sample Code**
+
+```groovy
 assert js."document.title" == "Geb"
 ```
 
-### 對話視窗
+## 對話視窗
 一般常見的對話視窗有alert、confirm、prompt， [`AlertAndConfirmSupport`](http://www.gebish.org/manual/current/api/geb/js/AlertAndConfirmSupport.html) 這個類別涵蓋了前兩項，由於Geb不鼓勵使用prompt對話視窗，所以不支持這個功能。
 
 常用類別 `AlertAndConfirmSupport` 的方法
@@ -79,9 +84,9 @@ assert js."document.title" == "Geb"
 範例
 ----
 
-####  geb
+**Geb Sample Code**
 
-```
+```groovy
 package example
 
 import geb.Page
@@ -124,9 +129,9 @@ class JavascriptPage extends Page{
 
 ```
 
-#### html
+**HTML Source Code**
 
-```
+```html
 <html>
 <head lang="en">
     <meta charset="UTF-8">
