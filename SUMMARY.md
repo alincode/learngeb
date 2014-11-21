@@ -65,10 +65,12 @@ Summary
 	* [敏捷式開發](TDD/agile.md)
 	* [規格](TDD/spec.md)
 	* [測試類型](TDD/test-type.md)
-	* [測試資料與資料庫](TDD/test-db-data.md)
+<!--
+    * [測試資料與資料庫](TDD/test-db-data.md)
 	* [定義規格](TDD/define-spec.md)
 	* [功能切細分工](TDD/unit-cowork.md)
 	* [異常處理流程](TDD/bug-handle.md)
 	* [持續整合改善](TDD/continuous-integration.md)
+-->
 * [常見問題](question/README.md)
 * [課程服務](consulting/README.md)
