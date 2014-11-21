@@ -10,7 +10,7 @@
 
 ### 可辨別出 `Browser` 的方法
 
-只要類別是繼承 GebSpec，例如 `GebReportingSpec` 或 `GebSpec` 都可以，都可以辨識 [`Browser`](http://www.gebish.org/manual/current/api/geb/Browser.html) 的方法，像 `to` 和 `at` 就是 `Browser` 類別的方法。
+只要類別是繼承 `GebSpec`，就可以辨識 [`Browser`](http://www.gebish.org/manual/current/api/geb/Browser.html) 的方法，像 `to` 和 `at` 就是 `Browser` 類別的方法。
 
 **Geb Sample Code**
 
