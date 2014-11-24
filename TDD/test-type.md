@@ -1,18 +1,14 @@
-測試類型
-========
+# 測試類型
 
-unit test
----------
+## unit test
 
 最小單位的測試，通常不需要啟動應用程式實體，屬於最快速的測試方式。
 
-integration test
-----------------
+## integration test
 
 將啟動應用程式實體，所以每次測試循環需要等啟動完成後才可以進行測試，一般來說會用於測試 rest api 或是 orm model 實際運作的情形
 
-functional test
----------------
+## functional test
 
 功能測試，是最複雜的，簡單來說，除了啟動 server 還包括 UI 的 test，geb 的應用正是在這層級的應用。
 
