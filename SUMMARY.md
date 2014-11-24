@@ -64,7 +64,7 @@
    * [敏捷式開發](TDD/agile.md)
    * [可執行的規格](TDD/executable-spec.md)
    * [測試類型](TDD/test-type.md)
-   * [測試資料與資料庫](tdd/init-db-data.md)
+   * [測試資料與資料庫](TDD/init-db-data.md)
    * [定義規格](TDD/define-spec.md)
    * [功能切細分工](TDD/implement.md)
    * [異常處理流程](TDD/bug-handle.md)
