@@ -87,7 +87,7 @@ required為false，則不會拋出exception。</td>
     </tr>
 </table>
 
-### 使用 required
+### 使用 `required`
 
 **Geb Sample Code**
 
@@ -111,7 +111,7 @@ class FrontPage extends Page {
 }
 ```
 
-### 使用 cache
+### 使用 `cache`
 
 **Geb Sample Code**
 
@@ -161,4 +161,39 @@ class FrontPage extends Page {
         theValue2(cache: false) { value2 }
     }
 }
+```
+
+### 使用 `page`
+
+常運用於彈跳視窗
+
+**Geb Sample Code**
+
+```groovy
+package pages
+
+import geb.Page
+
+class FrontPage extends Page{
+
+    static at = {$('h4').text() == "home"}
+
+    static url = '/'
+
+    static content = {
+        alertButton {$('#alert')}
+        alertFrame(page: AlertPage){$('iframe')}
+    }
+}
+
+```
+
+```groovy
+to FrontPage
+alertButton.click()
+
+withFrame(alertFrame){
+    // doSomething
+}
+
 ```
