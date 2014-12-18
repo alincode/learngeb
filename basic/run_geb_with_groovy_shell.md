@@ -1,4 +1,4 @@
-# Run Geb with Groovy Shell
+# 使用 Groovy Shell 執行 Geb
 
 使用 Groovy Shell 開始學習 Geb
 

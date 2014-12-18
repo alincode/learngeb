@@ -4,22 +4,21 @@
 
 `go` 指令用來開啓一個網頁 URL 位址。
 
-```
+```groovy
+@Grab('org.gebish:geb-core:0.10.0')
+@Grab('org.seleniumhq.selenium:selenium-firefox-driver:2.44.0')
 import geb.Browser
 
 Browser.drive {
-    go "http://www.codedata.com.tw/"
+    go 'http://www.codedata.com.tw/'
 }
 ```
 
 以下是自動化操作 Google 搜尋的完整範例，使用 Geb 的 DSL 語法撰寫相當簡單易懂。
 
-```
-@Grapes([
-    @Grab('org.gebish:geb-core:0.9.2'),
-    @Grab('org.seleniumhq.selenium:selenium-firefox-driver:2.42.0'),
-    @Grab('org.seleniumhq.selenium:selenium-support:2.42.0')
-])
+```groovy
+@Grab('org.gebish:geb-core:0.10.0')
+@Grab('org.seleniumhq.selenium:selenium-firefox-driver:2.44.0')
 import geb.Browser
 
 Browser.drive {
