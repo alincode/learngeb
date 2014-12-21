@@ -110,7 +110,7 @@ $('form').donate().click()
 
 ```groovy
 // boolean
-isDonate = $('checkbox', name: 'donate').value()
+def isDonate = $('checkbox', name: 'donate').value()
 
 $('checkbox', name: 'donate').value(true)
 $('checkbox', name: 'donate').value(false)
@@ -259,23 +259,3 @@ $('form').artist
 ```groovy
 assert $('form').artist == '1'
 ```
-
-## 多選欄位（Multiple Select）
-
-**HTML Source Code**
-
-```html
-<form>
-    <select name="meaf" multiple>
-        <option value="1">beef</option>
-        <option value="2">chicken</option>
-        <option value="3">pork</option>
-        <option value="4">fish</option>
-        <option value="5">duck</option>
-    </select>
-</form>
-```
-
-**Geb Sample Code**
-
-// TODO: 待捕
