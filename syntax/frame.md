@@ -46,13 +46,54 @@ withFrame($('#footer')) { assert $('span').text() == 'footer text' }
 **Geb Sample Code**
 
 ```groovy
-to LayoutPage
-withFrame(aboutFrame) {
-      assert $('span').text()== 'about text'
-}
-```
+class FrameSpec extends GebReportingSpec{
 
-```groovy
+    def setup() {
+        to LayoutPage
+    }
+
+    def 'frame example 1'(){
+        when:
+        withFrame($('#content')) {
+            assert $('span').text() == 'about text'
+        }
+
+        then:
+        $('span').text() == 'main'
+    }
+
+    def 'frame example 2'(){
+        when:
+        withFrame(aboutFrame) {
+            assert $('span').text() == 'about text'
+        }
+
+        then:
+        $('span').text() == 'main'
+    }
+
+    def 'frame example 3'(){
+        when:
+        withFrame('header') {
+            assert $('span').text() == 'header text'
+        }
+
+        then:
+        $('span').text() == 'main'
+    }
+
+    def 'frame example 4'(){
+        when:
+        withFrame(0) {
+            assert $('span').text() == 'header text'
+        }
+
+        then:
+        $('span').text() == 'main'
+    }
+
+}
+
 class LayoutPage extends Page {
     static url = 'layout.html'
     static content = {

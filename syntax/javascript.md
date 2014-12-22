@@ -87,14 +87,6 @@ assert js."document.title" == "Javascript Example"
 **Geb Sample Code**
 
 ```groovy
-package example
-
-import geb.Page
-import geb.spock.GebReportingSpec
-
-/**
- * @see geb.js.AlertAndConfirmSupport
- */
 class JavascriptSpec extends GebReportingSpec{
 
     def setup() {
@@ -135,7 +127,7 @@ class JavascriptPage extends Page{
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title></title>
+    <title>Javascript Example</title>
 </head>
 <body>
 <input type="button" name="showAlert" onclick="alert('Hello World!');" value="showAlert"/>

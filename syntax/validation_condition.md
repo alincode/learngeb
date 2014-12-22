@@ -8,24 +8,24 @@
 
 **HTML Source Code**
 
-```
+```html
 <html>
 <body>
-	<div>aaa</div>
+	<span>about text</span>
 </body>
 </html>
 ```
 
 **Geb Sample Code**
 
-```
-assert $('div').text() == 'aaa'
+```groovy
+assert $('span').text() == 'about text'
 ```
 
 ## 特定元素存不存在？
 
 **HTML Source Code**
-```
+```html
 <html>
 <body>
 	<div></div>
@@ -36,7 +36,7 @@ assert $('div').text() == 'aaa'
 
 **Geb Sample Code**
 
-```
+```groovy
 assert $('div').size() == 2
 ```
 
@@ -44,12 +44,8 @@ assert $('div').size() == 2
 
 **Geb Sample Code**
 
-```
-go('/rest/instances/'+ id + '/usage?knot=1')
-def result = $('pre').text().substring(1, $('pre').text().length()-1)
-def info = new JsonSlurper().parseText(result)
-
-assert info.cpu == 1
-assert info.networkOut == 0
-assert info.networkIn == 0
+```groovy
+    URL apiUrl = new URL('http://0.0.0.0:1234/myname.json')
+    def data = new JsonSlurper().parseText(apiUrl.text)
+    assert data.info.firstName == 'Liou'
 ```

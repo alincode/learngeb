@@ -5,15 +5,27 @@
 **Geb Sample Code**
 
 ```groovy
-import geb.Page
+Browser.drive {
+    config.baseUrl = 'http://getbootstrap.com/'
+    to SigninPage
+    login('aaa@bbb.com', '11111111')
 
-class LoginPage extends Page {
-    static url = "http://localhost:8080/user/login"
-    static at = { heading.text() == "Login Form" }
+    assert emailInput.value() == ''
+}.quit()
+
+class SigninPage extends Page {
+    static at = {$('h2').text() == 'Please sign in'}
+    static url = 'examples/signin/'
     static content = {
-        heading { $("h1.page-title") }
-        loginForm { $("form.login-form") }
-        loginButton(to: DashboardPage) { $("button.submit") }
+        emailInput {$('#inputEmail')}
+        passwordInput {$('#inputPassword')}
+        loginButton {$('button')}
+    }
+
+    def login(email, password){
+        emailInput.value email
+        passwordInput.value password
+        loginButton.click()
     }
 }
 ```

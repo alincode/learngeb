@@ -7,21 +7,18 @@
 **Geb Sample Code**
 
 ```groovy
-import geb.*
+Browser.drive {
+    config.baseUrl = 'http://0.0.0.0:1234/'
+    to LoginPage
+    emailInput.value('aaa@bbb.com')
+}.quit()
 
 class LoginPage extends Page {
-
+    static url = 'login.html'
     static content = {
         // «名稱» { «定義» }
         emailInput { $("input[name=account]") }
     }
-}
-```
-
-```groovy
-Browser.drive {
-    to LoginPage
-    emailInput.value('aaa@bbb.com')
 }
 ```
 
@@ -30,19 +27,17 @@ Browser.drive {
 **Geb Sample Code**
 
 ```groovy
-class FrontPage extends Page {
-
-    static content = {
-        menu { menuLinkName -> $('div', id: menuLinkName) }
-    }
-}
-```
-
-```groovy
 Browser.drive {
+    config.baseUrl = 'http://www.gebish.org/'
     to FrontPage
-    assert menu("menu-about").text() == "About Me"
-    assert menu("menu-faq").text() == "FAQ"
+    assert menuText("crossbrowser") == "Cross Browser"
+    assert menuText("content") == "jQuery-like API"
+}.quit()
+
+class FrontPage extends Page {
+    static content = {
+        menuText { sidemenuName -> $('.sidemenu li', class: sidemenuName).find('a').text() }
+    }
 }
 ```
 
@@ -93,22 +88,52 @@ required為false，則不會拋出exception。</td>
 
 ```groovy
 Browser.drive {
-    to ExamplePage
-    loginLink.click()
+    config.baseUrl = 'http://getbootstrap.com/'
+    to SigninPage
+    println h1Title
+}.quit()
+
+class SigninPage extends Page {
+    static url = 'examples/signin/'
+    static content = {
+        h1Title(required: false) {$('h1').text()}
+    }
 }
 ```
 
+** 錯誤訊息 **
+```
+Caught: groovy.lang.MissingPropertyException: No such property: h1Title for class: required
+groovy.lang.MissingPropertyException: No such property: h1Title for class: required
+        at required$_run_closure1.doCall(required.groovy:11)
+        at required$_run_closure1.doCall(required.groovy)
+        at geb.Browser.drive(Browser.groovy:884)
+        at geb.Browser$drive$0.callStatic(Unknown Source)
+        at geb.Browser.drive(Browser.groovy:854)
+        at geb.Browser$drive.call(Unknown Source)
+        at required.run(required.groovy:8)
+```
+
+**Geb Sample Code**
+
 ```groovy
-import geb.*
+Browser.drive {
+    config.baseUrl = 'http://getbootstrap.com/'
+    to SigninPage
+    println h1Title
+}.quit()
 
-class FrontPage extends Page {
-
+class SigninPage extends Page {
+    static url = 'examples/signin/'
     static content = {
-        // «名稱»(«參數») { «定義» }
-        loginLink(required: false) { $('.login') }
-        logoutLink(required: false) { $('.logout') }
+        h1Title(required: false) {$('h1').text()}
     }
 }
+```
+
+** 錯誤訊息 **
+```
+null
 ```
 
 ### 使用 `cache`
@@ -170,30 +195,30 @@ class FrontPage extends Page {
 **Geb Sample Code**
 
 ```groovy
-package pages
+Browser.drive {
+    config.baseUrl = 'http://www.jacklmoore.com/'
+    to OutsidePage
+    outsideWebpageLink.click()
+    sleep(5000)
 
-import geb.Page
+    withFrame(wikiFrame){
+        assert h1Ttitle == 'Wikipedia'
+    }
+}.quit()
 
-class FrontPage extends Page{
-
-    static at = {$('h4').text() == "home"}
-
-    static url = '/'
-
+class OutsidePage extends Page {
+    static url = '/colorbox/example2/'
     static content = {
-        alertButton {$('#alert')}
-        alertFrame(page: AlertPage){$('iframe')}
+        outsideWebpageLink {$('.iframe')}
+        wikiFrame(page: WikiPage){$('iframe')}
     }
 }
 
-```
-
-```groovy
-to FrontPage
-alertButton.click()
-
-withFrame(alertFrame){
-    // doSomething
+class WikiPage extends Page{
+    static at = {title == 'Wikipedia'}
+    static url = 'http://www.wikipedia.org/'
+    static content = {
+        h1Ttitle {$('h1 img').attr('title')}
+    }
 }
-
 ```

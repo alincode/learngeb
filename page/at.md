@@ -13,15 +13,17 @@
 ```groovy
 class GebHomePage extends Page {
 
-    static url = "http://www.gebish.org/"
-    static at = { title == "Geb - Very Groovy Browser Automation" }
-     static content = {
+    static at = {$('#main h1').first().text() == 'What is it?' }
+
+    static url = "http://www.gebish.org"
+
+    static content = {
         item1 { $('#sidebar li a').first() }
     }
 }
 ```
 
-`title` 是哪裡來的？[`Page Object API`](http://www.gebish.org/manual/current/api/geb/Page.html)裡面有一個 `getTitle()` ，那為什麼是用 `title`，而不是 `getTitle()` ，您可以去了解一下 [`JavaBean`](http://zh.wikipedia.org/wiki/JavaBeans) 的由來 ，Groovy 語法上比 Java 精簡，可以直接寫 `title` ，就可以了。
+`title` 是哪裡來的？[`Page Object API`](http://www.gebish.org/manual/current/api/geb/Page.html)裡面有一個 `getTitle()` ，Groovy 語法上比 Java 精簡，直接寫 `title` 就可以了。
 
 ### 元素
 
@@ -30,11 +32,9 @@ class GebHomePage extends Page {
 **Geb Sample Code**
 
 ```groovy
-import geb.*
-
-class GebHomePage extends Page {
-    static url = "http://www.gebish.org/"
+class GebHomePage2 extends Page {
     static at = { $('h1').last().text() == "Build Status" }
+    static url = "http://www.gebish.org"
 }
 ```
 
@@ -45,11 +45,10 @@ class GebHomePage extends Page {
 **Geb Sample Code**
 
 ```groovy
-import geb.*
-
-class GebHomePage extends Page {
-    static url = "http://www.gebish.org/"
+class GebHomePage3 extends Page {
     static at = { waitFor { title.endsWith("Groovy Browser Automation") } }
+    static url = "http://www.gebish.org"
+}
 }
 ```
 
@@ -61,7 +60,8 @@ class GebHomePage extends Page {
 
 ```groovy
 class CrossBrowserPage extends Page {
-    // 故意定義錯的檢查條件
+
+    // // 故意定義錯的檢查條件
     static at = {$('#main h1').first().text() == 'Cross Browser Automation2'}
 
     static url = "http://www.gebish.org/crossbrowser"
@@ -80,12 +80,21 @@ class CrossBrowserPage extends Page {
 **Geb Sample Code**
 
 ```groovy
-import geb.Browser
-
 Browser.drive {
     to GebHomePage
     item1.click()
     assert $('#main h1').first().text() == 'Cross Browser Automation'
+}.quit()
+
+class GebHomePage extends Page {
+
+    static at = {$('#main h1').first().text() == 'What is it?' }
+
+    static url = "http://www.gebish.org"
+
+    static content = {
+        item1 { $('#sidebar li a').first() }
+    }
 }
 ```
 
@@ -96,23 +105,70 @@ Browser.drive {
 **Geb Sample Code**
 
 ```groovy
-import geb.Browser
-
 Browser.drive {
     to GebHomePage
     item1.click()
     at CrossBrowserPage
+}.quit()
+
+class GebHomePage extends Page {
+
+    static at = {$('#main h1').first().text() == 'What is it?' }
+
+    static url = "http://www.gebish.org"
+
+    static content = {
+        item1 { $('#sidebar li a').first() }
+    }
+}
+
+class CrossBrowserPage extends Page {
+
+    // // 故意定義錯的檢查條件
+    static at = {$('#main h1').first().text() == 'Cross Browser Automation2'}
+
+    static url = "http://www.gebish.org/crossbrowser"
+
+    static content = {
+        topic3 { $('#main h1').last().text() }
+    }
 }
 ```
 
 ** 錯誤訊息 **
 ```
+Caught: Assertion failed:
+
+$('#main h1').first().text() == 'Cross Browser Automation2'
+|             |       |      |
+|             [<h1>]  |      false
+[<h1>, <h1>, <h1>]    Cross Browser Automation
+
 Assertion failed:
 
 $('#main h1').first().text() == 'Cross Browser Automation2'
 |             |       |      |
-|             |       |      false
-|             |       Cross Browser Automation
+|             [<h1>]  |      false
+[<h1>, <h1>, <h1>]    Cross Browser Automation
+
+        at CrossBrowserPage$__clinit__closure1.doCall(at2.groovy:28)
+        at CrossBrowserPage$__clinit__closure1.doCall(at2.groovy)
+        at geb.Page.verifyThisPageAtOnly(Page.groovy:187)
+        at geb.Page.verifyAt(Page.groovy:146)
+        at geb.Page$verifyAt$3.call(Unknown Source)
+        at geb.Page$verifyAt$3.call(Unknown Source)
+        at geb.Browser.doAt(Browser.groovy:367)
+        at geb.Browser.this$2$doAt(Browser.groovy)
+        at geb.Browser$this$2$doAt$10.callCurrent(Unknown Source)
+        at geb.Browser$this$2$doAt$10.callCurrent(Unknown Source)
+        at geb.Browser.at(Browser.groovy:298)
+        at at2$_run_closure1.doCall(at2.groovy:11)
+        at at2$_run_closure1.doCall(at2.groovy)
+        at geb.Browser.drive(Browser.groovy:884)
+        at geb.Browser$drive$0.callStatic(Unknown Source)
+        at geb.Browser.drive(Browser.groovy:854)
+        at geb.Browser$drive.call(Unknown Source)
+        at at2.run(at2.groovy:8)
 ```
 
 ### 範例三
@@ -120,26 +176,56 @@ $('#main h1').first().text() == 'Cross Browser Automation2'
 **Geb Sample Code**
 
 ```groovy
-import geb.Browser
-
 Browser.drive {
     to GebHomePage
     item1.click(CrossBrowserPage)
+}.quit()
+
+class GebHomePage extends Page {
+
+    static at = {$('#main h1').first().text() == 'What is it?' }
+
+    static url = "http://www.gebish.org"
+
+    static content = {
+        item1 { $('#sidebar li a').first() }
+    }
+}
+
+class CrossBrowserPage extends Page {
+
+    // // 故意定義錯的檢查條件
+    static at = {$('#main h1').first().text() == 'Cross Browser Automation2'}
+
+    static url = "http://www.gebish.org/crossbrowser"
+
+    static content = {
+        topic3 { $('#main h1').last().text() }
+    }
 }
 ```
 
 **錯誤訊息**
 
 ```groovy
-geb.error.UnexpectedPageException: Page verification failed for page pages.CrossBrowserPage after clicking an element
-	at geb.navigator.NonEmptyNavigator.click(NonEmptyNavigator.groovy:415)
-	at example.AtSpec.at example 3(AtSpec.groovy:27)
+Caught: geb.error.UnexpectedPageException: Page verification failed for page CrossBrowserPage after clicking an element
+geb.error.UnexpectedPageException: Page verification failed for page CrossBrowserPage after clicking an element
+        at geb.navigator.NonEmptyNavigator.click(NonEmptyNavigator.groovy:477)
+        at geb.navigator.NonEmptyNavigator.click(NonEmptyNavigator.groovy)
+        at geb.content.TemplateDerivedPageContent.click(TemplateDerivedPageContent.groovy:27)
+        at at3$_run_closure1.doCall(at3.groovy:10)
+        at at3$_run_closure1.doCall(at3.groovy)
+        at geb.Browser.drive(Browser.groovy:884)
+        at geb.Browser$drive$0.callStatic(Unknown Source)
+        at geb.Browser.drive(Browser.groovy:854)
+        at geb.Browser$drive.call(Unknown Source)
+        at at3.run(at3.groovy:8)
 Caused by: Assertion failed:
 
 $('#main h1').first().text() == 'Cross Browser Automation2'
 |             |       |      |
-|             |       |      false
-|             |       Cross Browser Automation
+|             [<h1>]  |      false
+[<h1>, <h1>, <h1>]    Cross Browser Automation
 ```
 
 ### 範例四
@@ -147,20 +233,57 @@ $('#main h1').first().text() == 'Cross Browser Automation2'
 **Geb Sample Code**
 
 ```groovy
-import geb.Browser
-
 Browser.drive {
     to CrossBrowserPage
+}.quit()
+
+class CrossBrowserPage extends Page {
+
+    // // 故意定義錯的檢查條件
+    static at = {$('#main h1').first().text() == 'Cross Browser Automation2'}
+
+    static url = "http://www.gebish.org/crossbrowser"
+
+    static content = {
+        topic3 { $('#main h1').last().text() }
+    }
 }
 ```
 
 **錯誤訊息**
 
 ```
+Caught: Assertion failed:
+
+$('#main h1').first().text() == 'Cross Browser Automation2'
+|             |       |      |
+|             [<h1>]  |      false
+[<h1>, <h1>, <h1>]    Cross Browser Automation
+
 Assertion failed:
 
 $('#main h1').first().text() == 'Cross Browser Automation2'
 |             |       |      |
-|             |       |      false
-|             |       Cross Browser Automation
+|             [<h1>]  |      false
+[<h1>, <h1>, <h1>]    Cross Browser Automation
+
+        at CrossBrowserPage$__clinit__closure1.doCall(at4.groovy:15)
+        at CrossBrowserPage$__clinit__closure1.doCall(at4.groovy)
+        at geb.Page.verifyThisPageAtOnly(Page.groovy:187)
+        at geb.Page.verifyAt(Page.groovy:146)
+        at geb.Page$verifyAt$3.call(Unknown Source)
+        at geb.Browser.doAt(Browser.groovy:367)
+        at geb.Browser.this$2$doAt(Browser.groovy)
+        at geb.Browser$this$2$doAt$10.callCurrent(Unknown Source)
+        at geb.Browser.at(Browser.groovy:298)
+        at geb.Browser.to(Browser.groovy:450)
+        at geb.Browser$to$1.callCurrent(Unknown Source)
+        at geb.Browser.to(Browser.groovy:426)
+        at at4$_run_closure1.doCall(at4.groovy:9)
+        at at4$_run_closure1.doCall(at4.groovy)
+        at geb.Browser.drive(Browser.groovy:884)
+        at geb.Browser$drive$0.callStatic(Unknown Source)
+        at geb.Browser.drive(Browser.groovy:854)
+        at geb.Browser$drive.call(Unknown Source)
+        at at4.run(at4.groovy:8)
 ```

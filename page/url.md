@@ -10,16 +10,13 @@ Page Object 的靜態屬性 url ，我們可以只寫路徑，也可以寫 完�
 **Geb Sample Code**
 
 ```groovy
-import geb.*
+Browser.drive {
+    config.baseUrl = 'http://www.gebish.org/'
+    to ExamplePage
+}.quit()
 
 class ExamplePage extends Page {
     static url = "manual/current/all.html"
-}
-```
-
-```
-Browser.drive("http://www.gebish.org/") {
-    to ExamplePage
 }
 ```
 
@@ -27,23 +24,20 @@ Browser.drive("http://www.gebish.org/") {
 
 http://www.gebish.org/manual/current/all.html
 
-## 範例
+## 範例二
 
 有帶變數的路徑
 
 **Geb Sample Code**
 
 ```groovy
-import geb.*
+Browser.drive {
+    config.baseUrl = 'http://ithelp.ithome.com.tw/'
+    to IronmanPage, 20092025, 'dev'
+}.quit()
 
 class IronmanPage extends Page {
     static url = "ironman7/app/profile"
-}
-```
-
-```groovy
-Browser.drive("http://ithelp.ithome.com.tw/) {
-    to IronmanPage, 20092025, dev
 }
 ```
 
@@ -58,27 +52,21 @@ http://ithelp.ithome.com.tw/ironman7/app/profile/20092025/dev
 **Geb Sample Code**
 
 ```groovy
+Browser.drive {
+    def newPerson = new FacebookPerson(nickname: "ShabuComeShabuGo")
+    to FacebookPage, newPerson
+}.quit()
+
 class FacebookPerson {
     String nickname
 }
-```
 
-```groovy
 class FacebookPage extends Page{
-    static url = ""
+    static url = "https://www.facebook.com/"
 
     String convertToPath(FacebookPerson person) {
         person.nickname.toString()
     }
-}
-```
-
-```groovy
-def newPerson = new FacebookPerson(nickame: "ShabuComeShabuGo")
-
-Browser.drive {
-    go "https://www.facebook.com/"
-    to FacebookPage, newPerson
 }
 ```
 

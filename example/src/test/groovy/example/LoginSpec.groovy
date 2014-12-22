@@ -1,14 +1,8 @@
-## Page物件模式
+package example
 
-Page有三個靜態屬性
+import geb.Page
+import geb.spock.GebReportingSpec
 
-* url：網址
-* at：頁面的檢查條件
-* content：Page包含的元素
-
-除了這三個區塊外，你還可以額外自定物件的方法。
-
-```groovy
 class LoginSpec extends GebReportingSpec{
 
     def setup() {
@@ -43,5 +37,3 @@ class LoginPage extends Page {
         loginButton.click()
     }
 }
-
-```

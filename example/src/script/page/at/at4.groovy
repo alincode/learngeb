@@ -1,6 +1,13 @@
-package pages
-
+@Grab('org.gebish:geb-core:0.10.0')
+@Grab('org.seleniumhq.selenium:selenium-htmlunit-driver:2.44.0')
+import geb.Browser
 import geb.Page
+
+driver = 'htmlunit'
+
+Browser.drive {
+    to CrossBrowserPage
+}.quit()
 
 class CrossBrowserPage extends Page {
 
@@ -13,4 +20,3 @@ class CrossBrowserPage extends Page {
         topic3 { $('#main h1').last().text() }
     }
 }
-
