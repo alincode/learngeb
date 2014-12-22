@@ -1,5 +1,5 @@
-@Grab('org.gebish:geb-core:0.9.3')
-@Grab('org.seleniumhq.selenium:selenium-htmlunit-driver:2.43.1')
+@Grab('org.gebish:geb-core:0.10.0')
+@Grab('org.seleniumhq.selenium:selenium-htmlunit-driver:2.44.0')
 import geb.Browser
 
 driver = 'htmlunit'

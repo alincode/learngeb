@@ -48,7 +48,7 @@ assert js.add(1, 1) == 2
 **Geb Sample Code**
 
 ```groovy
-assert js."document.title" == "Geb"
+assert js."document.title" == "Javascript Example"
 ```
 
 ## 對話視窗

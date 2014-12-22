@@ -1,0 +1,11 @@
+input, select {
+    display: block;
+}
+.code-box {
+    font-size: 13px;
+    background-color: #EBF5FF;
+    border: 1px #CDE5FF solid;
+    padding: 8px;
+    margin: 10px 0px 18px 0px;
+    font-family: sans-serif;
+}
