@@ -19,6 +19,6 @@
 ## Speakers
 
 * 劉艾霖, Geb Testing Practice
-* 林彥宏, Groovy and Grails programming 
+* 林彥宏, Groovy and Grails programming
 * 謝宗穎, Test-driven development
 
