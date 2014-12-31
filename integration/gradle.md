@@ -10,17 +10,17 @@ repositories {
 }
 
 dependencies {
-    groovy "org.codehaus.groovy:groovy-all:2.3.3"
+    groovy "org.codehaus.groovy:groovy-all:2.3.6"
 
 
     // spock-core
     testCompile "org.spockframework:spock-core:0.7-groovy-2.0"
 
     // geb, geb-spock
-    testCompile "org.gebish:geb-core:0.9.3"
-    testCompile "org.gebish:geb-spock:0.9.3"
+    testCompile "org.gebish:geb-core:0.10.0"
+    testCompile "org.gebish:geb-spock:0.10.0"
     testCompile "org.seleniumhq.selenium:selenium-firefox-driver:2.42.0"
-    testCompile "org.seleniumhq.selenium:selenium-support:2.42.0"
+    testCompile "org.seleniumhq.selenium:selenium-support:2.44.0"
 }
 ```
 
