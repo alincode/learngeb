@@ -1,86 +1,17 @@
 # Content DSL
 
-## 範例
-
-### 範例一
-
-**Geb Sample Code**
-
-```groovy
-Browser.drive {
-    config.baseUrl = 'http://0.0.0.0:1234/'
-    to LoginPage
-    emailInput.value('aaa@bbb.com')
-}.quit()
-
-class LoginPage extends Page {
-    static url = 'login.html'
-    static content = {
-        // «名稱» { «定義» }
-        emailInput { $("input[name=account]") }
-    }
-}
-```
-
-### 範例二
-
-**Geb Sample Code**
-
-```groovy
-Browser.drive {
-    config.baseUrl = 'http://www.gebish.org/'
-    to FrontPage
-    assert menuText("crossbrowser") == "Cross Browser"
-    assert menuText("content") == "jQuery-like API"
-}.quit()
-
-class FrontPage extends Page {
-    static content = {
-        menuText { sidemenuName -> $('.sidemenu li', class: sidemenuName).find('a').text() }
-    }
-}
-```
-
 ## 自定參數
 
 除了使用預設參數，也可選擇自定參數。
 
-<table>
-    <tr>
-        <th>參數</th><th>預設值</th><th>說明</th>
-    </tr>
-    <tr>
-        <td>required</td>
-        <td>true</td>
-        <td>當required為true，但loginLink不存在時，下面的範例會拋出[RequiredPageContentNotPresent](http://www.gebish.org/manual/current/api/geb/error/RequiredPageContentNotPresent.html)，但若
-required為false，則不會拋出exception。</td>
-    </tr>
-   <tr>
-        <td>required</td>
-        <td>true</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>cache</td>
-        <td>false</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>to</td>
-        <td>null</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>wait</td>
-        <td>false</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>page</td>
-        <td>null</td>
-        <td></td>
-    </tr>
-</table>
+
+| 參數 | 預設值 | 說明 |
+| -- | -- | -- |
+| required | true | 當required為true，但loginLink不存在時，下面的範例會拋出[RequiredPageContentNotPresent](http://www.gebish.org/manual/current/api/geb/error/RequiredPageContentNotPresent.html)，但若 required為false，則不會拋出exception。 |
+| cache | false | - |
+| to | null | - |
+| wait | false | - |
+| page | null | - |
 
 ### 使用 `required`
 
@@ -219,6 +150,47 @@ class WikiPage extends Page{
     static url = 'http://www.wikipedia.org/'
     static content = {
         h1Ttitle {$('h1 img').attr('title')}
+    }
+}
+```
+
+## 範例
+
+### 範例一
+
+**Geb Sample Code**
+
+```groovy
+Browser.drive {
+    config.baseUrl = 'http://0.0.0.0:1234/'
+    to LoginPage
+    emailInput.value('aaa@bbb.com')
+}.quit()
+
+class LoginPage extends Page {
+    static url = 'login.html'
+    static content = {
+        // «名稱» { «定義» }
+        emailInput { $("input[name=account]") }
+    }
+}
+```
+
+### 範例二
+
+**Geb Sample Code**
+
+```groovy
+Browser.drive {
+    config.baseUrl = 'http://www.gebish.org/'
+    to FrontPage
+    assert menuText("crossbrowser") == "Cross Browser"
+    assert menuText("content") == "jQuery-like API"
+}.quit()
+
+class FrontPage extends Page {
+    static content = {
+        menuText { sidemenuName -> $('.sidemenu li', class: sidemenuName).find('a').text() }
     }
 }
 ```
