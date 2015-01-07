@@ -2,8 +2,6 @@
 
 是一個建構於 Groovy 語言的測試框架，可透過 Junit runner 執行測試。
 
-主要的類別是 `spock.lang.Specification`，常用的 `geb.spock.GebReportingSpec` 和 `geb.spock.GebSpec` 都是繼承 Specification 類別，我們實作 Specification 來定義將測試的規格跟測試步驟。
-
 ## Specification
 主要的類別是 `spock.lang.Specification`，常用的 `geb.spock.GebReportingSpec` 和 `geb.spock.GebSpec` 都是繼承 Specification 類別，我們實作 Specification 來定義將測試的規格跟測試步驟。
 

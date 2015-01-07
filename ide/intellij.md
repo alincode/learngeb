@@ -23,7 +23,7 @@ class LoginWebSiteSpec extends GebReportingSpec {
 
 ## 可辨識出 Content DSL
 
-只要是繼承 `Page` 和 `Module` 的類別，在都可以自動辨識出 Content DSL 裡定義的屬性。例如下面範例的 privacyText 變數，在 IntelliJ IDEA 就可以被辨識出來。
+只要是繼承 `Page` 和 `Module` 的類別，就可以自動辨識出 Content DSL 裡定義的屬性。例如下面範例的 privacyText 變數，在 IntelliJ IDEA 就可以被辨識出來。
 
 **Geb Sample Code**
 

@@ -2,6 +2,8 @@
 
 **SpiraTestCase**
 
+自定 Spock Annotation 來聯結 SpiraTestCase 的 Test Case ID
+
 ```java
 @java.lang.annotation.Target({java.lang.annotation.ElementType.TYPE})
 @java.lang.annotation.Retention(java.lang.annotation.RetentionPolicy.RUNTIME)
@@ -12,6 +14,8 @@ public @interface SpiraTestCase {
 ```
 
 **SpiraTestSet**
+
+自定 Spock Annotation 來聯結 SpiraTestCase 的 Test Set ID
 
 ```java
 @java.lang.annotation.Target({java.lang.annotation.ElementType.TYPE})
@@ -58,6 +62,8 @@ public class SpiraIntegrationListener extends RunListener{
 
 **pom.xml**
 
+關閉了預設的 `maven-surefire-plugin` listeners，改設定為指定自行實作的 CustomerListener。
+
 ```xml
     <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -88,6 +94,8 @@ public class SpiraIntegrationListener extends RunListener{
 
 **GebReportingSpec**
 
+於每個類別上設定所屬的 Annotation
+
 ```groovy
 @Stepwise
 @SpiraTestCase(id=123)
@@ -96,6 +104,8 @@ class FaqSpec extends GebReportingSpec
 ```
 
 ## 虛擬碼
+
+主要整合邏輯
 
 ```java
 updateTestCaseSteps();

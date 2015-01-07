@@ -11,7 +11,7 @@ yum install jenkins
 service jenkins start
 ```
 ## 修改port
-自動安裝預設為8080，請更改port的設定 ```JENKINS_PORT=“9095”``` ，因為tomcat預設的port也是8080，會衝突。
+自動安裝預設為 8080，請更改 port 的設定 ```JENKINS_PORT=“9095”``` ，因為 Tomcat 預設的 port 也是 8080，會衝突。
 
 ## 安裝plugin
 

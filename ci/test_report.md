@@ -1,6 +1,6 @@
 # 測試結果
 
-在範例中，我們使用了maven surefire，Jenkins內建呈現此報表套件，所以我們連設定都不需要，就可以看到親和力十足的報表。
+在範例中，我們使用了 maven surefire 產出 Junit 格式的報表，Jenkins 預設會自動截取 Junit 格式報表的資料，轉用更親和力的圖形化報表來呈現。
 
 **pom.xml**
 

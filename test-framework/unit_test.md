@@ -35,5 +35,5 @@ class LoginSpec extends GebSpec {
 在搭配 Spock 框架使用時，需要額外的 [geb-spock](http://mvnrepository.com/artifact/org.gebish/geb-spock) 套件。
 
 ```groovy
-@Grab('org.gebish:geb-spock:0.9.3')
+@Grab('org.gebish:geb-spock:0.10.0')
 ```

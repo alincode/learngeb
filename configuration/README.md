@@ -1,7 +1,7 @@
 # 設定檔
 
 * 在開始動手之前，來看看 [Configuration API](http://www.gebish.org/manual/current/api/geb/Configuration.html)
-* 有哪些東西可以設定？找set開頭的method
+* 有哪些東西可以設定？找 set 開頭的 method
 * 要怎麼設？
 
 **setReportOnTestFailureOnly(boolean value)**

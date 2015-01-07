@@ -1,6 +1,7 @@
 
 # Driver
-你要驅動哪個瀏覽器，全看這個設定了。你可以將Firefox視為預設的瀏覽器，因為它是唯一不是要另外裝Driver的Browser。
+
+你要驅動哪個瀏覽器全看這個設定了，最簡單的方式就是將 Firefox 視為預設的瀏覽器，因為它是唯一不是要另外裝 Driver 的 Browser。
 
 **Geb Sample Code**
 
@@ -10,7 +11,7 @@ import org.openqa.selenium.firefox.FirefoxDriver
 driver = { new FirefoxDriver() }
 ```
 
-當然你也可以設Chrome，因為執行速度比較快，我個人都用這個。但使用Chrome需要另外裝[ Chrome Driver ](https://code.google.com/p/selenium/wiki/ChromeDriver)。
+當然你也可以設 Chrome，因為執行速度比較快，我個人都用這個。但使用 Chrome 需要另外裝[ Chrome Driver ](https://code.google.com/p/selenium/wiki/ChromeDriver)。
 
 **Geb Sample Code**
 
@@ -50,7 +51,7 @@ cp chromedriver /usr/bin/.
 
 ### Windowns 32bit 安裝 裝 Chrome Driver
 
-因為每個版本的路徑不太一樣，我建議你直接搜尋chrome.exe，然後把解壓縮的檔案，放在跟chrome.exe同個資料夾下。
+因為每個版本的路徑不太一樣，我建議你直接搜尋 chrome.exe，然後把解壓縮的檔案，放在跟 chrome.exe 同個資料夾下。
 
 ## 設定環境變數
 

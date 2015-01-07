@@ -2,11 +2,6 @@
 
 Geb 需要 Java 與 Groovy。
 
-建議使用的版本：
-
-* Java 7 以上
-* Groovy 2 以上
-
 ## 安裝 Java
 
 下載並安裝 JDK（Java SE Development Kit）軟體。
