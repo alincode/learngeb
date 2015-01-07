@@ -118,7 +118,7 @@ def "offered PC matches preferred configuration"() {
 ```
 
 **範例一**
-```
+```groovy
 def matchesPreferredConfiguration(pc) {
   pc.vendor == "Sunny"
   && pc.clockRate >= 2333
@@ -137,7 +137,7 @@ matchesPreferredConfiguration(pc)
 false                         ...
 ```
 **範例二**
-```
+```groovy
 void matchesPreferredConfiguration(pc) {
   assert pc.vendor == "Sunny"
   assert pc.clockRate >= 2333
@@ -157,7 +157,7 @@ assert pc.clockRate >= 2333
 ## 規格文件
 可以直接使用 domain 語言，替區域撰寫描述
 
-```
+```groovy
 setup: "開啟與資料庫的連線"
 
 and: "載入客戶資料"
