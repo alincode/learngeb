@@ -9,11 +9,11 @@ Gradle 是專案自動化建置（build automation）工具，使用 Groovy DSL 
 
 取得最新版的 Gradle
 
-The latest release of Gradle is 2.2, released on 10th November 2014.
+The latest release of Gradle is version 2.8, released on 20th October 2015.
 
 http://gradle.org/downloads
 
-安裝提示：下載及解壓縮 gradle-2.2-bin.zip 檔案，並正確設定環境變數的 PATH。
+安裝提示：下載及解壓縮 gradle-2.8-bin.zip 檔案，並正確設定環境變數的 PATH。
 
 Ubuntu Linux 可以使用 apt-get 安裝（但我們仍建議您考慮 GVM 安裝方式）。
 
