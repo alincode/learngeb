@@ -53,13 +53,13 @@ Selenium IDE 是 Firefox 附加元件（extension），需要搭配 Firefox 瀏�
 Selenium Server 是以可執行的 Java JAR 封裝檔發行，可以從 Selenium 網站下載「selenium-server-standalone-版本編號.jar」，然後利用 java 指令執行。
 
 ```bash
-java -jar selenium-server-standalone-2.44.0.jar
+java -jar selenium-server-standalone-2.48.2.jar
 ```
 
 預設的 Port 號碼是 4444，如果已經被佔用，也可以指派一組 Port 給它。
 
 ```bash
-java -jar selenium-server-standalone-2.44.0.jar -port 4400
+java -jar selenium-server-standalone-2.48.2.jar -port 4400
 ```
 
 在 Selenium Server 執行成功後，從終端機輸出訊息可以得知連線字串。
@@ -85,11 +85,46 @@ http://127.0.0.1:4444/wd/hub
 Sellenium WebDriver API 支援 Java、C#、Ruby、Python 及 Perl 等多種語言，以下是 Java 語言的範例程式碼，示範以 Firefox 瀏覽器打開 Google 網站、搜尋「selenium」關鍵字的自動化操作。
 
 ```java
-WebDriver driver = new FirefoxDriver();
-driver.get("http://www.google.com");
-WebElement element = driver.findElement(By.name("q"));
-element.sendKeys("selenium");
-element.submit();
-System.out.println("Title: " + driver.getTitle());
-driver.quit();
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class Selenium2Example {
+
+    public static void main(String[] args) {
+
+        WebDriver driver = new FirefoxDriver();
+        driver.get("http://www.google.com");
+        WebElement element = driver.findElement(By.name("q"));
+        element.sendKeys("啟動Geb");
+        element.submit();
+        System.out.println("Title: " + driver.getTitle());
+        driver.quit();
+    }
+}
+```
+
+POM.xml
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>idv</groupId>
+    <artifactId>alincode</artifactId>
+    <version>1.0</version>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>2.48.2</version>
+        </dependency>
+    </dependencies>
+
+</project>
 ```
