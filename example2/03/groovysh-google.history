@@ -1,0 +1,14 @@
+import groovy.grape.Grape
+Grape.grab(group: 'org.gebish', module: 'geb-core', version: '0.12.2')
+Grape.grab(group: 'org.seleniumhq.selenium', module: 'selenium-firefox-driver', version: '2.46.0')
+browser = new geb.Browser()
+browser.go 'http://google.com'
+form = browser.$('form#tsf')
+form.size()
+form.q = 'jcconf 2014'
+btnK = form.find('input[name=btnK]')
+btnK.click()
+browser.$('h3').each { println it.text() }
+browser.$('h3').collect { it.text() }
+browser.$('h3 a').each { println "* [${it.text()}](${it.attr('href')})" }
+browser.driver.pageSource
