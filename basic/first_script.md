@@ -6,13 +6,13 @@ Geb 測試程式本身就是 Groovy 原始碼，使用 Groovy Console 或使用�
 
 以下是一個最簡易的 Geb 程式碼範例，包含所需的 Grapes 相依套件宣告。在裝有 Groovy 與 Firefox 瀏覽器的電腦上即可直接執行。
 
-範例：`ex01.groovy`
+範例：`03/first-script.groovy`
 
 ```
 @Grapes([
-    @Grab('org.gebish:geb-core:0.9.2'),
-    @Grab('org.seleniumhq.selenium:selenium-firefox-driver:2.42.0'),
-    @Grab('org.seleniumhq.selenium:selenium-support:2.42.0')
+    @Grab('org.gebish:geb-core:0.12.2'),
+    @Grab('org.seleniumhq.selenium:selenium-firefox-driver:2.46.0'),
+    @Grab('org.seleniumhq.selenium:selenium-support:2.46.0')
 ])
 import geb.Browser
 
@@ -21,4 +21,4 @@ Browser.drive {
 }
 ```
 
-執行方式：終端機執行指令「`groovy ex01.groovy`」。
+執行方式：終端機執行指令「`groovy first-script.groovy`」。

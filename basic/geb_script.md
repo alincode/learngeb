@@ -4,13 +4,13 @@
 
 Geb 基於 WebDriver 的良好基礎，所以 WebDriver 支援的瀏覽器，在 Geb 也同樣能操作。利用 Groovy DSL 易讀易寫的優點，Geb 提供更友善的 Web Test Script 開發環境。在 Geb 程式中，可以直接與其他 Java（Groovy）程式碼互相搭配，例如透過 JDBC 從資料庫取得資料，或是將測試結果利用 JavaMail 傳送電子郵件報告等。
 
-在 Groovy Script 中使用 Geb 相當容易，只要利用 Grapes/Grab 設定相依的 geb-core 及相關套件。目前 Geb 最新穩定發行版本為 0.9.2，可以透過 Maven Central Repository 下載取得，因此直接加上以下的 `@Grapes` 設定與 `import` 語法，就能開始在 Groovy Script 程式中使用 Geb。
+在 Groovy Script 中使用 Geb 相當容易，只要利用 Grapes/Grab 設定相依的 geb-core 及相關套件。目前 Geb 最新穩定發行版本為 0.10.2，可以透過 Maven Central Repository 下載取得，因此直接加上以下的 `@Grapes` 設定與 `import` 語法，就能開始在 Groovy Script 程式中使用 Geb。
 
 ```
 @Grapes([
-    @Grab('org.gebish:geb-core:0.9.2'),
-    @Grab('org.seleniumhq.selenium:selenium-firefox-driver:2.42.0'),
-    @Grab('org.seleniumhq.selenium:selenium-support:2.42.0')
+    @Grab('org.gebish:geb-core:0.12.2'),
+    @Grab('org.seleniumhq.selenium:selenium-firefox-driver:2.46.0'),
+    @Grab('org.seleniumhq.selenium:selenium-support:2.46.0')
 ])
 import geb.Browser
 ```
@@ -23,4 +23,37 @@ import geb.Browser
 compile "org.gebish:geb-core:0.9.2"
 compile "org.seleniumhq.selenium:selenium-firefox-driver:2.26.0"
 compile "org.seleniumhq.selenium:selenium-support:2.26.0"
+```
+
+## 範例
+
+### 原始碼
+
+```
+@Grab('org.gebish:geb-core:0.12.2')
+@Grab('org.seleniumhq.selenium:selenium-firefox-driver:2.46.0')
+import geb.Browser
+
+def keywords = args.join(' ')
+
+Browser.drive {
+    go 'http://google.com'
+
+    $('form#tsf').with {
+      q = keywords
+      btnK().click()
+    }
+    waitFor {
+        $('h3').size() > 0
+    }
+    $('h3').each {
+        println "* ${it.text()}"
+    }
+}.quit()
+```
+
+### 執行
+
+```
+groovy google-search.groovy
 ```
