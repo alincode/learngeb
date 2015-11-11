@@ -56,7 +56,7 @@ task downloadChromeDriver {
 	doLast {
 		def driverOsFilenamePart
 
-    // 依照作業系統不同，抓取 Driver 的網址也需更變。
+    // 依照作業系統不同，檔案名稱會更變。
 		if (Os.isFamily(Os.FAMILY_WINDOWS)) {
 			driverOsFilenamePart = "win32"
 		} else if (Os.isFamily(Os.FAMILY_MAC)) {
