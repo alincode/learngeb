@@ -2,7 +2,40 @@
 
 提供比 Maven 更大的彈性，它是使用 Groovy 語言，可以直接在設定檔編寫 Script。
 
-## 範例
+## 基本設定
+*** build.gradle ***
+```
+apply plugin: "groovy"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    groovy "org.codehaus.groovy:groovy-all:2.3.10"
+
+    def gebVersion = "0.12.2"
+    def seleniumVersion = "2.45.0"
+
+    // If using Spock, need to depend on geb-spock
+    testCompile "org.gebish:geb-spock:0.12.2"
+    testCompile "org.spockframework:spock-core:1.0-groovy-2.3"
+
+    // If using JUnit, need to depend on geb-junit (3 or 4)
+    testCompile "org.gebish:geb-junit4:0.12.2"
+    testCompile "junit:junit-dep:4.8.2"
+
+    // Need a driver implementation
+    testCompile "org.seleniumhq.selenium:selenium-firefox-driver:2.45.0"
+    testRuntime "org.seleniumhq.selenium:selenium-support:2.45.0"
+}
+
+test {
+    systemProperties "geb.build.reportsDir": "$reportsDir/geb"
+}
+```
+
+## 完整設定
 
 ### 遇到的問題
 在這裡以官方範例簡化說明，我們每次增加一種測試的瀏覽器，
