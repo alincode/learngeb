@@ -4,6 +4,19 @@
 
 * lyhcode 小老鼠 gmail.com
 
+## Intellij IDE 顯示錯誤提示 ##
+
+*** 問題 ***
+
+在實作繼承 `Page` 的類別時，IDE 要求要實作 waitFor 方法。
+
+*** 解決方案 ***
+
+這個是已知的 Bug ，請更新至 0.12.1 以上的版本。
+
+[[ ISSUE 391 ]](https://github.com/geb/issues/issues/391)
+Intellij complains that Page classes should implement WaitingSupport methods when using 0.12.0
+
 ## 出現 UnresolvablePropertyException？
 
 ```
@@ -24,4 +37,8 @@ geb.error.UnresolvablePropertyException: Unable to resolve searchModule as conte
 
 > The InternetExplorerDriver is a standalone server which implements WebDriver's wire protocol. This driver has been tested with IE 6, 7, 8, 9, and 10 on appropriate combinations of XP, Vista and Windows 7.
 
-從 [InternetExplorerDriver](https://code.google.com/p/selenium/wiki/InternetExplorerDriver) 的說明來看，目前仍是可以相容 IE 6, 7, 8 這些老舊瀏覽器。使用 VirtualBox 等虛擬機器軟體，建立一個 Windows XP 或 Windows 7 的 VM，更新（或不要更新） IE 到需要測試的版本，接下來就停用 Windows Update，讓 IE 的版本鎖定，在 VM 執行 Selenium Server，搭配 RemoteWebDriver 使用，如此一來就能讓 Geb 測試古老架構的網站。
+從 [InternetExplorerDriver](https://code.google.com/p/selenium/wiki/InternetExplorerDriver) 的說明來看，目前仍是可以相容 IE 6, 7, 8 這些老舊瀏覽器。
+
+*** 解決方法 ***
+- 使用線上測試服務平臺，例如 `SauceLabs` 或 `BrowserStack`。
+- 使用 VirtualBox 等虛擬機器軟體，建立一個 Windows XP 或 Windows 7 的 VM，更新（或不要更新） IE 到需要測試的版本，接下來就停用 Windows Update，讓 IE 的版本鎖定，在 VM 執行 Selenium Server，搭配 RemoteWebDriver 使用，如此一來就能讓 Geb 測試古老架構的網站。

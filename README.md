@@ -41,7 +41,7 @@ Geb 是瀏覽器自動化（browser automation）的解決方案。
 
 這是一本開放源碼電子書，使用 GitBook 協作出版，本書全文與範例程式碼放在 GitHub 網站。
 
-https://github.com/lyhcode/learning-geb
+https://github.com/readbook/learngeb
 
 ## 如何取得電子書？
 
@@ -61,4 +61,3 @@ http://learngeb.readbook.tw/
 
 * 使用 [GitHub Issues](https://github.com/lyhcode/learning-geb/issues) 回報錯誤
 * 寄信到 lyhcode 小老鼠 gmail.com
-

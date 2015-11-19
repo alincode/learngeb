@@ -1,5 +1,7 @@
 # 實戰 Sauce Labs
 
+## 範例
+
 *** GebConfig.groovy ***
 ```
 import geb.driver.SauceLabsDriverFactory
@@ -72,8 +74,19 @@ sauceLabs {
         username = System.getenv(SauceAccount.USER_ENV_VAR)
         accessKey = System.getenv(SauceAccount.ACCESS_KEY_ENV_VAR)
     }
-    connect {
-        port = 4445
-    }
-}
 ```
+完整範例下載：[geb-with-sauce-labs](https://github.com/readbook/learngeb/tree/master/example2/13/geb-with-sauce-labs)
+
+## 測試結果
+
+*** 自動化測試歷史記錄 ***
+
+![自動化測試歷史記錄](auto-test-history.png)
+
+*** 測試資訊 ***
+
+![測試資訊](test-info.png)
+
+*** 測試過程錄影 ***
+
+![測試過程錄影](video.png)
