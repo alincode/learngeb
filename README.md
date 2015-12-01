@@ -38,6 +38,7 @@ Geb 是瀏覽器自動化（browser automation）的解決方案。
 
 * 劉艾霖（資深網站開發者）
 * 林彥宏（Java / Groovy 開發技術推廣者）
+* 謝宗穎（Docker / Jenkins CI 開發技術推廣者）
 
 這是一本開放源碼電子書，使用 GitBook 協作出版，本書全文與範例程式碼放在 GitHub 網站。
 
