@@ -16,10 +16,12 @@ Geb 是瀏覽器自動化（browser automation）的解決方案。
 
 <!--<iframe src="//www.slideshare.net/slideshow/embed_code/41586026" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>-->
 
-* [動手玩 Java 專案建置工具：以 Gradle 與 Docker 為例](http://jcconf.tw/speaker/play-java-with-gradle-and-docker.html)（發表於 [JCConf Taiwan 2015](http://jcconf.tw/schedule.html) 由社群主辦 Java 開發者年會）
-* [淺談 Geb 網站自動化測試](http://www.slideshare.net/lyhcode/jcconf-2014gebtalk) （發表於 [JCConf Taiwan 2014](http://jcconf.tw/schedule.html) 由社群主辦 Java 開發者年會）
+* [動手玩 Java 專案建置工具：以 Gradle 與 Docker 為例](http://jcconf.tw/speaker/play-java-with-gradle-and-docker.html)<br/>（發表於 [JCConf Taiwan 2015](http://jcconf.tw/schedule.html) 由社群主辦 Java 開發者年會）
+* [淺談 Geb 網站自動化測試](http://www.slideshare.net/lyhcode/jcconf-2014gebtalk)<br/> （發表於 [JCConf Taiwan 2014](http://jcconf.tw/schedule.html) 由社群主辦 Java 開發者年會）
 
-企業培訓請聯繫【創科資訊】教學團隊 william@trunk-studio.com
+企業培訓請聯繫【創科資訊】教學團隊
+
+    william@trunk-studio.com
 
 <!--
 ## 書評
