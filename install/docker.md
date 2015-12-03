@@ -29,10 +29,6 @@ docker ps
 docker run hello-world
 ```
 
-注意事項：
-
-如果還是不行，可以重開 ubuntu 再次[確認安裝是否完成]。
-
 ### docker-compose install
 
 下述指令請用 `root` 執行
