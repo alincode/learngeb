@@ -49,8 +49,8 @@ rm machine.zip && \
 mv docker-machine* /usr/local/bin
 ```
 
-OSX or Windows
---------------
+## Mac OS X 與 Windows
+
 
 docker-tools: https://www.docker.com/toolbox
 
