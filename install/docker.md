@@ -4,7 +4,7 @@
 
 ## 安裝 Docker
 
-Ubuntu
+Ubuntu Linux
 ------
 
 ```
