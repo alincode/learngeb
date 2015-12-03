@@ -21,7 +21,7 @@ sudo usermod -a -G docker {username}
 sudo service docker.io restart
 ```
 
-### 確認安裝是否完成
+確認安裝是否完成
 
 ```
 docker -v
