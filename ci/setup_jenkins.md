@@ -1,8 +1,8 @@
-# 安裝Jenkins
+# 安裝 Jenkins
 
 ## 安裝步驟
 
-**Centos**
+**CentOS**
 
 ```bash
 sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo
