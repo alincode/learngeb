@@ -31,7 +31,7 @@ docker run hello-world
 
 ### 安裝 docker-compose
 
-下述指令請用 `root` 執行
+下述指令請用 `root` 執行。
 
 ```
 curl -L https://github.com/docker/compose/releases/download/1.4.2/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
@@ -40,7 +40,7 @@ chmod +x /usr/local/bin/docker-compose
 
 ### 安裝 docker-machine
 
-下述指令請用 `root` 執行
+下述指令請用 `root` 執行。
 
 ```
 curl -L https://github.com/docker/machine/releases/download/v0.5.0/docker-machine_linux-amd64.zip >machine.zip && \
