@@ -29,7 +29,7 @@ docker ps
 docker run hello-world
 ```
 
-### docker-compose
+### 安裝 docker-compose
 
 下述指令請用 `root` 執行
 
@@ -38,7 +38,7 @@ curl -L https://github.com/docker/compose/releases/download/1.4.2/docker-compose
 chmod +x /usr/local/bin/docker-compose
 ```
 
-### docker-machine
+### 安裝 docker-machine
 
 下述指令請用 `root` 執行
 
