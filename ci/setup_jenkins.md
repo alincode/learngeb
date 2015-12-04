@@ -10,7 +10,7 @@ sudo rpm --import http://pkg.jenkins-ci.org/redhat-stable/jenkins-ci.org.key
 yum install jenkins
 service jenkins start
 ```
-## 修改port
+## 修改 Port
 自動安裝預設為 8080，請更改 port 的設定 ```JENKINS_PORT=“9095”``` ，因為 Tomcat 預設的 port 也是 8080，會衝突。
 
 ## 安裝plugin
