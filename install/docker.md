@@ -55,7 +55,7 @@ mv docker-machine* /usr/local/bin
 
 Docker Toolbox: https://www.docker.com/toolbox
 
-Docker Toolbox 包含 Docker、Docker Compose 及 Docker Machine 等主要軟體。
+Docker Toolbox 包含 Docker、Docker Compose 及 Docker Machine 等主要軟體工具。
 
 ### 透過 docker-machine 進行連接
 
