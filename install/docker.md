@@ -2,6 +2,8 @@
 
 > Docker containers wrap up a piece of software in a complete filesystem that contains everything it needs to run: code, runtime, system tools, system libraries – anything you can install on a server. This guarantees that it will always run the same, regardless of the environment it is running in.
 
+您也可以搭配 Docker 來執行 Groovy、Gradle 及 Geb 程式，如此一來，會讓開發環境的配置更容易維護。
+
 ## Ubuntu Linux
 
 使用 `apt-get` 安裝。
@@ -57,7 +59,7 @@ Docker Toolbox: https://www.docker.com/toolbox
 
 Docker Toolbox 包含 Docker、Docker Compose 及 Docker Machine 等主要軟體工具。
 
-### 透過 docker-machine 進行連接
+### 透過 Docker Machine 進行連接
 
 #### 啟動 docker-machine
 
