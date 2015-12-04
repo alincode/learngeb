@@ -53,7 +53,7 @@ mv docker-machine* /usr/local/bin
 
 建議使用 Docker Toolbox 安裝。
 
-docker-tools: https://www.docker.com/toolbox
+Docker Toolbox: https://www.docker.com/toolbox
 
 安裝 docker-tools 將會自動安裝 Docker，docker-machine，docker-compose
 
