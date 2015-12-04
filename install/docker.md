@@ -55,7 +55,7 @@ mv docker-machine* /usr/local/bin
 
 Docker Toolbox: https://www.docker.com/toolbox
 
-安裝 docker-tools 將會自動安裝 Docker，docker-machine，docker-compose
+Docker Toolbox 包含 Docker、Docker Compose 及 Docker Machine 等主要軟體元件。
 
 ### 透過 docker-machine 進行連接
 
