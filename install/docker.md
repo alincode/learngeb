@@ -51,7 +51,7 @@ mv docker-machine* /usr/local/bin
 
 ## Mac OS X 與 Windows
 
-建議使用 Docker Toolbox
+建議使用 Docker Toolbox 安裝。
 
 docker-tools: https://www.docker.com/toolbox
 
