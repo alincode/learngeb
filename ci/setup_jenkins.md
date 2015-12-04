@@ -13,7 +13,7 @@ service jenkins start
 ## 修改 Port
 自動安裝預設為 8080，請更改 port 的設定 ```JENKINS_PORT=“9095”``` ，因為 Tomcat 預設的 port 也是 8080，會衝突。
 
-## 安裝 Plugin
+## 安裝 Plugins
 
 * [Publish Over SSH Plugin](https://wiki.jenkins-ci.org/display/JENKINS/Publish+Over+SSH+Plugin)
 * [Email-ext plugin](https://wiki.jenkins-ci.org/display/JENKINS/Email-ext+plugin)
