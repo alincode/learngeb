@@ -4,7 +4,7 @@ Page有三個靜態屬性
 
 * url：網址
 * at：頁面的檢查條件
-* content：Page包含的元素
+* content DSL：Page包含的元素
 
 除了這三個區塊外，你還可以額外自定物件的方法。
 

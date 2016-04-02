@@ -4,7 +4,6 @@
 
 除了使用預設參數，也可選擇自定參數。
 
-
 | 參數 | 預設值 | 說明 |
 | -- | -- | -- |
 | required | true | 當required為true，但loginLink不存在時，下面的範例會拋出[RequiredPageContentNotPresent](http://www.gebish.org/manual/current/api/geb/error/RequiredPageContentNotPresent.html)，但若 required為false，則不會拋出exception。 |
@@ -12,6 +11,11 @@
 | to | null | - |
 | wait | false | - |
 | page | null | - |
+
+`«name»(«options map») { «definition» }`
+
+`theDiv(cache: false, required: false) { $("div", id: "a") }`
+
 
 ### 使用 `required`
 
@@ -27,12 +31,13 @@ Browser.drive {
 class SigninPage extends Page {
     static url = 'examples/signin/'
     static content = {
-        h1Title(required: false) {$('h1').text()}
+        h1Title(required: true) {$('h1').text()}
     }
 }
 ```
 
-** 錯誤訊息 **
+**列印出的內容**
+
 ```
 Caught: groovy.lang.MissingPropertyException: No such property: h1Title for class: required
 groovy.lang.MissingPropertyException: No such property: h1Title for class: required
@@ -62,7 +67,8 @@ class SigninPage extends Page {
 }
 ```
 
-** 錯誤訊息 **
+**列印出的內容**
+
 ```
 null
 ```
@@ -121,7 +127,7 @@ class FrontPage extends Page {
 
 ### 使用 `page`
 
-常運用於彈跳視窗
+常運用於 Frame 元件
 
 **Geb Sample Code**
 

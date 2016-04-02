@@ -1,9 +1,11 @@
 # Page URL
 * url 由 ( baseUrl + 路徑) 所組成
-* 例如http://www.gebish.org/manual/current/all.html
-    * baseUrl 是 http://www.gebish.org/
-    * 路徑是 manual/current/all.html
-Page Object 的靜態屬性 url ，我們可以只寫路徑，也可以寫 完整的url。
+* Page Object 的 url ，我們可以只寫路徑，也可以寫完整的url。
+
+
+**例如 http://www.gebish.org/manual/current/all.html**
+* baseUrl 是 http://www.gebish.org/
+* 路徑是 manual/current/all.html
 
 ## 範例一
 
@@ -26,7 +28,7 @@ http://www.gebish.org/manual/current/all.html
 
 ## 範例二
 
-有帶變數的路徑
+有帶參數的路徑
 
 **Geb Sample Code**
 
@@ -73,3 +75,6 @@ class FacebookPage extends Page{
 **實際完整路徑**
 
 https://www.facebook.com/ShabuComeShabuGo
+
+**String convertToPath(Object[] args)**
+Converts the arguments to a path to be appended to this page's url.

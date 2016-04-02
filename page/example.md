@@ -1,12 +1,14 @@
 # 完整範例
 
-以下是 `Page` 物件定義的範例，在`content`區塊中，我們將該網頁內容需要被自動化操作的 DOM 元件，先透過 Navigator  API 找到，就能夠方便在測試程式中使用。
+以下是 `Page` 物件定義的範例，在 `content` 區塊中，我們將替網頁中需要被操作的 DOM 元件，透過 Navigator API 定義它們，利於再寫測試碼時使用。
 
 **Geb Sample Code**
 
 ```groovy
 Browser.drive {
+
     config.baseUrl = 'http://getbootstrap.com/'
+
     to SigninPage
     login('aaa@bbb.com', '11111111')
 
