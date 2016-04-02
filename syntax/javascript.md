@@ -52,7 +52,7 @@ assert js."document.title" == "Javascript Example"
 ```
 
 ## 對話視窗
-一般常見的對話視窗有alert、confirm、prompt， [`AlertAndConfirmSupport`](http://www.gebish.org/manual/current/api/geb/js/AlertAndConfirmSupport.html) 這個類別涵蓋了前兩項，由於Geb不鼓勵使用prompt對話視窗，所以不支持這個功能。
+一般常見的對話視窗有alert、confirm、prompt， [`AlertAndConfirmSupport`](http://www.gebish.org/manual/current/api/geb/js/AlertAndConfirmSupport.html) 這個類別涵蓋了前兩項，由於 Geb 不鼓勵使用 prompt 對話視窗，所以不支持這個功能。
 
 常用類別 `AlertAndConfirmSupport` 的方法
 <table>

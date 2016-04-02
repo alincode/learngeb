@@ -1,9 +1,10 @@
 # Frame
-現在多數的網站都不用瀏覽器原生的彈跳視窗，而是使用框架提供的視窗，以 [`JQuery UI dialog`](http://jqueryui.com/dialog/) 為例，可透過瀏覽器開發者工具動態觀察原始碼，你就可以發現實際上背後是iframe元素。
+
+現在多數的網站都不用瀏覽器原生的彈跳視窗，而是使用框架提供的視窗，以 [`JQuery UI dialog`](http://jqueryui.com/dialog/) 為例，可透過瀏覽器開發者工具動態觀察原始碼，你就可以發現實際上背後是 iframe 元素。
 
 語法上可以大概分為兩類：
 * 直接控制元素
-* 定義成Page物件的content後，在控制元素
+* 定義成 Page 物件的 content 後，在控制元素
 
 下面例子是針對官方舉的例子做修改與延伸，其他method的使用，可以在查看 [`Frame API`](http://www.gebish.org/manual/current/api/geb/frame/FrameSupport.html)。
 

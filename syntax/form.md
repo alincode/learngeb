@@ -64,7 +64,7 @@ $('input', name: 'address').value('台北市中正區重慶南路一段')
 $('form').address = '台北市中正區重慶南路一段'
 ```
 
-取得值。
+取得值
 
 ```groovy
 // 1.
@@ -189,13 +189,13 @@ HTML 表單中的單選按鈕。
 $('form').sex = "female"
 ```
 
-取得值。
+取得值
 
 ```groovy
 $('form').sex
 ```
 
-判斷式。
+判斷式
 
 ```groovy
 assert $('form').sex == 'female'
@@ -248,13 +248,13 @@ $('form').artist = 'Alin'
 $('form').artist = 1 // same as '1'
 ```
 
-取得值。
+取得值
 
 ```groovy
 $('form').artist
 ```
 
-判斷式。
+判斷式
 
 ```groovy
 assert $('form').artist == '1'
