@@ -1,6 +1,6 @@
 # 完整範例
 
-以下是 `Page` 物件定義的範例，在 `content` 區塊中，我們將替網頁中需要被操作的 DOM 元件，透過 Navigator API 定義它們，利於再寫測試碼時使用。
+以下是 `Page` 物件定義的範例，在 `content` 區塊中，我們將替網頁中需要被操作的 DOM 元件，透過 `Navigator API` 定義它們，利於再寫測試碼時使用。
 
 **Geb Sample Code**
 
@@ -50,7 +50,7 @@ class DashboardPage extends Page {
 * 使用 `to` 開啟 `Page` 物件所在的 URL 位址。
 * 使用 `at` 判斷是否為在該 `Page` 所屬頁面。
 
-`Page` 物件讓 Geb 測試程式呈現更有趣的 DSL 風格。
+`Page` 物件讓 Geb 測試碼呈現更有趣的 DSL 風格。
 
 **Geb Sample Code**
 
@@ -69,4 +69,4 @@ Browser.drive {
 }
 ```
 
-定義好的 Page 物件可以被重複使用，依照測試案例（test case）的需求，組合成不同的測試執行流程。對於中大型的 Web Application 自動化測試，Geb 的 Page 物件讓測試程式的維護更容易。
+定義好的 Page 物件可以被重複使用，依照測試案例（test case）的需求，組合成不同的測試執行流程。對於中大型的 Web Application 測試，能降低測試碼維護的複雜度。

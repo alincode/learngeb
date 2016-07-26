@@ -77,4 +77,4 @@ class FacebookPage extends Page{
 https://www.facebook.com/ShabuComeShabuGo
 
 **String convertToPath(Object[] args)**
-Converts the arguments to a path to be appended to this page's url.
+* Converts the arguments to a path to be appended to this page's url.
