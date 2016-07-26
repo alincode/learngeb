@@ -43,7 +43,6 @@ jQuery-like selector and syntax
 
 實現 Page Object Pattern
 
-⾼高度整合測試框架，如 JUnit, Spock, TestNG 等。
+高度整合測試框架，如 JUnit, Spock, TestNG 等。
 
 開發流程整合，搭配 Grails, Gradle, Maven, Jenkins CI 等。
-
