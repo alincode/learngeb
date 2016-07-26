@@ -1,4 +1,4 @@
-# GoogleSearch 命令列界面
+# Google Search 命令列界面
 
 ```groovy
 #!/usr/bin/env groovy

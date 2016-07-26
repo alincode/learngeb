@@ -136,6 +136,6 @@ Browser.drive {
 
 ### 學習資源
 
-由於Selector機制與jQuery非常相似，便可以利用jQuery廣大的資源，快速學習。
-* [w3schools jQuery](http://www.w3schools.com/jquery/jquery_selectors.asp)：有許多範例，並提供線上改，線上測的界面，在學習語法上非常方便且快速。
+由於 Selector 機制與 jQuery 非常相似，便可以利用 jQuery 廣大的資源快速學習。
+* [w3schools jQuery](http://www.w3schools.com/jquery/jquery_selectors.asp)：有許多範例，並提供線上改線上測的界面，可方便快速的學習語法。
 * [jQuery Selector Tester](http://www.w3schools.com/jquery/trysel.asp)
