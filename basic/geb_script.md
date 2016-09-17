@@ -1,6 +1,6 @@
 # 執行 Geb Script
 
-儘管 Sellenium 提供的 WebDriver API 已經相當容易使用，但是在撰寫 Web Application 的自動化測試案例時，我們仍希望有更輕鬆的方式可以完成任務；過於冗長難以維護修改的測試程式碼，很容易造成自動化測試的理想在日後難以維繫。
+儘管 Selenium 提供的 WebDriver API 已經相當容易使用，但是在撰寫 Web Application 的自動化測試案例時，我們仍希望有更輕鬆的方式可以完成任務；過於冗長難以維護修改的測試程式碼，很容易造成自動化測試的理想在日後難以維繫。
 
 Geb 基於 WebDriver 的良好基礎，所以 WebDriver 支援的瀏覽器，在 Geb 也同樣能操作。利用 Groovy DSL 易讀易寫的優點，Geb 提供更友善的 Web Test Script 開發環境。在 Geb 程式中，可以直接與其他 Java（Groovy）程式碼互相搭配，例如透過 JDBC 從資料庫取得資料，或是將測試結果利用 JavaMail 傳送電子郵件報告等。
 
