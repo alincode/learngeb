@@ -21,7 +21,7 @@ Geb 是瀏覽器自動化（browser automation）的解決方案。
 
 企業培訓請聯繫【創科資訊】教學團隊
 
-    william@trunk-studio.com
+    <alincode@gmail.com>
 
 <!--
 ## 書評
@@ -66,4 +66,4 @@ http://learngeb.readbook.tw/
 如發現內容勘誤，請好心的大大協助我們更正，歡迎利用這些管道和我們聯繫：
 
 * 使用 [GitHub Issues](https://github.com/lyhcode/learning-geb/issues) 回報錯誤
-* 寄信到 lyhcode 小老鼠 gmail.com
+
