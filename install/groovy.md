@@ -49,7 +49,8 @@ Ubuntu Linux 常見的安裝路徑是：
 
 Groovy 提供 Windows 系統的自動安裝程式，可以輕鬆完成安裝。
 
-* 下載安裝程式：[Groovy 2.2.1 Windows Installer](http://dist.codehaus.org/groovy/distributions/installers/windows/nsis/groovy-2.2.1-installer.exe)
+* 下載安裝程式：[Groovy 2.4.8 Windows Installer](https://bintray.com/groovy/Distributions/download_file?file_path=groovy-2.4.8-installer.exe)
+* [下載其他版本的安裝檔](https://bintray.com/groovy/Distributions/Windows-Installer)
 
 在安裝過程中可以選擇需要的模組，如果磁碟容量充足，建議使用完整安裝以取得全部功能。
 
