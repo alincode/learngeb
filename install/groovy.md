@@ -49,8 +49,8 @@ Ubuntu Linux 常見的安裝路徑是：
 
 Groovy 提供 Windows 系統的自動安裝程式，可以輕鬆完成安裝。
 
-* 下載安裝程式：[Groovy 2.4.8 Windows Installer](https://bintray.com/groovy/Distributions/download_file?file_path=groovy-2.4.8-installer.exe)
-* [下載其他版本的安裝檔](https://bintray.com/groovy/Distributions/Windows-Installer)
+* 下載安裝程式：[Groovy 2.4.10 Windows Installer](https://dl.bintray.com/groovy/Distributions/groovy-2.4.10-installer.exe)
+* [下載其他版本的安裝檔](http://groovy-lang.org/download.html)
 
 在安裝過程中可以選擇需要的模組，如果磁碟容量充足，建議使用完整安裝以取得全部功能。
 
@@ -90,13 +90,12 @@ RedHat 或 CentOS 等 RPM-based Linux 系統，可以使用 `yum` 指令安裝�
 
 如果喜歡手動裝方式，也可以直接下載安裝最新版本，解壓縮到指定的路徑：
 
-    curl -O http://dist.groovy.codehaus.org/distributions/groovy-binary-2.2.1.zip
-    unzip groovy-binary-2.2.1.zip /usr/local
+    curl -O https://dl.bintray.com/groovy/maven/apache-groovy-binary-2.4.10.zip /usr/local
 
 選擇自行手動安裝 Groovy，請確認 JAVA_HOME 與 GROOVY_HOME 環境變數皆有正確的設定，並建議加到 $HOME 資料夾下的 `.bashrc` 或 `.profile` 設定檔。
 
     export JAVA_HOME=/usr/local/jdk-1.7.0
-    export GROOVY_HOME=/usr/local/groovy-2.2.1
+    export GROOVY_HOME=/usr/local/groovy-2.4.10
 
 ## 使用 GVM 安裝 Groovy（推薦）
 
@@ -120,13 +119,13 @@ GVM 是安裝 Groovy 的專用工具，它支援 Mac OS X 及 Linux 系統。
     gvm ls groovy
 
     # 安裝指定版本
-    gvm install groovy 2.1.9
+    gvm install groovy 2.4.10
 
     # 在當前的 Shell 中使用指定的版本
-    gvm use groovy 2.1.9
+    gvm use groovy 2.4.10
 
     # 設定預設使用的版本
-    gvm default groovy 2.1.9
+    gvm default groovy 2.4.10
 
     # 顯示目前正在使用的版本
     gvm current groovy
@@ -135,10 +134,10 @@ GVM 是安裝 Groovy 的專用工具，它支援 Mac OS X 及 Linux 系統。
 
 安裝完成後，先檢視 Groovy 的版本，確定 Groovy 程式可以被執行。
 
-在終端機執行「`groovy -version`」指令，可以檢查目前正在使用中的 Groovy 與 JVM 版本。
+在終端機執行「`groovy --version`」指令，可以檢查目前正在使用中的 Groovy 與 JVM 版本。
 
     groovy -version
 
 如果 Groovy 已正確安裝，直行後會顯示版本資訊。
 
-    Groovy Version: 2.2.1 JVM: 1.7.0_45 Vendor: Oracle Corporation OS: Mac OS X -->
+    Groovy Version: 2.4.10 JVM: 1.7.0_45 Vendor: Oracle Corporation OS: Mac OS X -->
