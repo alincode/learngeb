@@ -18,10 +18,7 @@ Geb 是瀏覽器自動化（browser automation）的解決方案。
 
 * [動手玩 Java 專案建置工具：以 Gradle 與 Docker 為例](http://jcconf.tw/speaker/play-java-with-gradle-and-docker.html)<br/>（發表於 [JCConf Taiwan 2015](http://jcconf.tw/schedule.html) 由社群主辦 Java 開發者年會）
 * [淺談 Geb 網站自動化測試](http://www.slideshare.net/lyhcode/jcconf-2014gebtalk)<br/> （發表於 [JCConf Taiwan 2014](http://jcconf.tw/schedule.html) 由社群主辦 Java 開發者年會）
-
-企業培訓請聯繫【創科資訊】教學團隊
-
-    <alincode@gmail.com>
+* 企業培訓請聯繫【創科資訊】教學團隊 <alincode@gmail.com>
 
 <!--
 ## 書評
@@ -41,9 +38,9 @@ Geb 是瀏覽器自動化（browser automation）的解決方案。
 
 ## 作者
 
-* 劉艾霖（資深網站開發者）
-* 林彥宏（Java / Groovy 開發技術推廣者）
-* 謝宗穎（Docker / Jenkins CI 開發技術推廣者）
+* 劉艾霖（軟體技術顧問）
+* 林彥宏（創科資訊創辦人）
+* 謝宗穎（創科資訊創辦人）
 
 這是一本開放源碼電子書，使用 GitBook 協作出版，本書全文與範例程式碼放在 GitHub 網站。
 
