@@ -68,4 +68,4 @@ http://learngeb.readbook.tw/
 
 如發現內容勘誤，請好心的大大協助我們更正，歡迎利用這些管道和我們聯繫：
 
-- 使用 [GitHub Issues](https://github.com/alincode/learninggeb/issues) 回報錯誤
+- 使用 [GitHub Issues](https://github.com/alincode/learngeb/issues) 回報錯誤
